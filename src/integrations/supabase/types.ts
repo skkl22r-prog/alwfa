@@ -14,7 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      rsvps: {
+        Row: {
+          created_at: string
+          device_id: string
+          id: string
+          name: string
+          qr_token: string | null
+          scanned: boolean
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          device_id: string
+          id?: string
+          name: string
+          qr_token?: string | null
+          scanned?: boolean
+          status: string
+        }
+        Update: {
+          created_at?: string
+          device_id?: string
+          id?: string
+          name?: string
+          qr_token?: string | null
+          scanned?: boolean
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
