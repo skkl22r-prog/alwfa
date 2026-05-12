@@ -38,7 +38,7 @@ const MusicToggle = ({ active }: Props) => {
       <button
         onClick={toggle}
         aria-label={playing ? "إيقاف الموسيقى" : "تشغيل الموسيقى"}
-        className="fixed top-4 left-4 z-50 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all hover:scale-110"
+        className="fixed bottom-4 left-4 z-50 w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-md transition-all hover:scale-110"
         style={{
           background: "hsla(40, 50%, 95%, 0.7)",
           border: "1.5px solid hsl(42 75% 55%)",

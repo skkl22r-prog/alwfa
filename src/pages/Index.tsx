@@ -12,24 +12,6 @@ import MusicToggle from "@/components/MusicToggle";
 const Index = () => {
   const [opened, setOpened] = useState(false);
 
-  useEffect(() => {
-    if (!opened) return;
-    const startScroll = () => {
-      const target = window.innerHeight * 0.9;
-      const duration = 2200;
-      const start = performance.now();
-      const startY = window.scrollY;
-      const ease = (t: number) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
-      const step = (now: number) => {
-        const p = Math.min(1, (now - start) / duration);
-        window.scrollTo(0, startY + (target - startY) * ease(p));
-        if (p < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    };
-    const t = setTimeout(startScroll, 800);
-    return () => clearTimeout(t);
-  }, [opened]);
 
   return (
     <div
@@ -55,12 +37,12 @@ const Index = () => {
       {opened && (
         <main className="relative z-10">
           {/* Invitation image */}
-          <section className="min-h-screen flex items-center justify-center px-4 py-10">
+          <section className="min-h-screen flex items-center justify-center">
             <Reveal>
               <img
                 src={invitationImg}
                 alt="دعوة زفاف راشد و سارة"
-                className="max-h-[90vh] w-auto rounded-lg"
+                className="w-screen h-auto max-w-none"
                 style={{ boxShadow: "var(--shadow-elegant)" }}
               />
             </Reveal>
