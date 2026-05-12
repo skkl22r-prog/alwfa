@@ -84,23 +84,24 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
           }}
         />
 
-        {/* Wax seal image - dead center */}
+        {/* Wax seal image - dead center on the envelope fold */}
         <div
-          className="absolute top-1/2 left-1/2 animate-float-slow"
+          className="absolute top-0 left-0 w-full h-full pointer-events-none flex items-center justify-center"
           style={{
-            transform: "translate(-50%, -50%)",
             opacity: opening ? 0 : 1,
             transition: "opacity 0.5s ease-out",
           }}
         >
-          <img
-            src={waxSeal}
-            alt="ختم الدعوة"
-            className="w-44 h-44 sm:w-52 sm:h-52 object-contain"
-            style={{
-              filter: "drop-shadow(0 14px 40px hsla(35, 60%, 10%, 0.65)) drop-shadow(0 0 25px hsla(45, 90%, 60%, 0.3))",
-            }}
-          />
+          <div className="animate-float-slow">
+            <img
+              src={waxSeal}
+              alt="ختم الدعوة"
+              className="w-44 h-44 sm:w-52 sm:h-52 object-contain"
+              style={{
+                filter: "drop-shadow(0 14px 40px hsla(35, 60%, 10%, 0.65)) drop-shadow(0 0 25px hsla(45, 90%, 60%, 0.3))",
+              }}
+            />
+          </div>
         </div>
       </div>
 
