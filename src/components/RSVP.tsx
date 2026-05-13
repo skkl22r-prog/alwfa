@@ -7,16 +7,6 @@ import Reveal from "./Reveal";
 // 👈 عدّل رقم الواتساب هنا (بصيغة دولية بدون + أو 00). مثال السعودية: 9665XXXXXXXX
 const HOST_WHATSAPP = "966554129943";
 
-const DEVICE_KEY = "rsvp_device_id";
-const getDeviceId = () => {
-  let id = localStorage.getItem(DEVICE_KEY);
-  if (!id) {
-    id = crypto.randomUUID();
-    localStorage.setItem(DEVICE_KEY, id);
-  }
-  return id;
-};
-
 type State =
   | { kind: "form" }
   | { kind: "loading" }
@@ -30,29 +20,11 @@ const RSVP = () => {
   const [choice, setChoice] = useState<"attending" | "declined" | null>(null);
   const [state, setState] = useState<State>({ kind: "form" });
 
-  // Restore previous response for this device
-  useEffect(() => {
-    (async () => {
-      const deviceId = getDeviceId();
-      const { data } = await supabase
-        .from("rsvps")
-        .select("*")
-        .eq("device_id", deviceId)
-        .maybeSingle();
-      if (data) {
-        if (data.status === "attending" && data.qr_token) {
-          setState({ kind: "attending", name: data.name, token: data.qr_token });
-        } else if (data.status === "declined") {
-          setState({ kind: "declined", name: data.name });
-        }
-      }
-    })();
-  }, []);
-
   const submit = async () => {
     if (!name.trim() || !choice) return;
     setState({ kind: "loading" });
-    const deviceId = getDeviceId();
+    // Generate a fresh device id for every submission so the same phone can register multiple times
+    const deviceId = crypto.randomUUID();
     const token = choice === "attending" ? crypto.randomUUID() : null;
 
     const { error } = await supabase.from("rsvps").insert({
@@ -66,20 +38,6 @@ const RSVP = () => {
       const msg = (error.message || "").toLowerCase();
       if (msg.includes("rsvp_full")) {
         setState({ kind: "full" });
-        return;
-      }
-      if (msg.includes("duplicate") || error.code === "23505") {
-        // Device already submitted — fetch existing
-        const { data } = await supabase
-          .from("rsvps")
-          .select("*")
-          .eq("device_id", deviceId)
-          .maybeSingle();
-        if (data?.status === "attending" && data.qr_token) {
-          setState({ kind: "attending", name: data.name, token: data.qr_token });
-        } else if (data?.status === "declined") {
-          setState({ kind: "declined", name: data.name });
-        }
         return;
       }
       setState({ kind: "error", msg: "حدث خطأ، حاول مرة أخرى" });
