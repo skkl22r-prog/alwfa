@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MapPin, Heart, QrCode, Baby, Camera } from "lucide-react";
 import invitationImg from "@/assets/invitation.jpg";
 import Envelope from "@/components/Envelope";
@@ -11,7 +11,6 @@ import MusicToggle from "@/components/MusicToggle";
 
 const Index = () => {
   const [opened, setOpened] = useState(false);
-
 
   return (
     <div
@@ -36,16 +35,13 @@ const Index = () => {
 
       {opened && (
         <main className="relative z-10">
-          {/* Invitation image */}
           <section className="min-h-screen flex items-center justify-center">
-            <Reveal>
-              <img
-                src={invitationImg}
-                alt="دعوة زفاف راشد و سارة"
-                className="w-screen h-auto max-w-none"
-                style={{ boxShadow: "var(--shadow-elegant)" }}
-              />
-            </Reveal>
+            <img
+              src={invitationImg}
+              alt="دعوة زفاف راشد و سارة"
+              className="w-screen h-auto max-w-none"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
+            />
           </section>
 
           {/* Calendar block — date 7/7/2026 with heart strikethrough */}
@@ -127,7 +123,7 @@ const Index = () => {
             <Reveal delay={100}>
               <div className="text-center mb-6">
                 <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
-                <div className="font-arabic text-2xl text-primary">قاعة فرح</div>
+                <div className="font-arabic text-2xl text-primary">الريتز - كارلتون</div>
                 <div className="font-arabic text-lg text-muted-foreground mt-1">جدة</div>
               </div>
             </Reveal>
