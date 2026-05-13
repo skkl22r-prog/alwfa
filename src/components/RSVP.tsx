@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Check, X, Send, Heart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
