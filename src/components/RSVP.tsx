@@ -88,8 +88,10 @@ const RSVP = () => {
 
     if (choice === "attending" && token) {
       setState({ kind: "attending", name: name.trim(), token });
+      sendWhatsApp("attending", name.trim());
     } else {
       setState({ kind: "declined", name: name.trim() });
+      sendWhatsApp("declined", name.trim());
     }
   };
 
@@ -140,18 +142,6 @@ const RSVP = () => {
           <p className="font-arabic text-xs text-muted-foreground mt-4">
             احتفظ بهذه الصفحة على جوالك وسنراك في الحفل
           </p>
-          <button
-            onClick={() => sendWhatsApp("attending", state.name)}
-            className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-arabic text-sm transition-all hover:scale-105"
-            style={{
-              background: "linear-gradient(135deg, hsl(142 70% 45%), hsl(142 65% 35%))",
-              color: "white",
-              boxShadow: "0 4px 14px hsl(142 60% 30% / 0.4)",
-            }}
-          >
-            <Send className="w-4 h-4" />
-            أرسل التأكيد عبر واتساب
-          </button>
         </div>
       </Reveal>
     );
