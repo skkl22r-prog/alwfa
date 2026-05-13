@@ -39,7 +39,7 @@ const Index = () => {
             <img
               src={invitationImg}
               alt="دعوة زفاف راشد و سارة"
-              className="w-screen h-auto max-w-none"
+              className="w-screen h-auto max-w-none animate-fade-in"
               style={{ boxShadow: "var(--shadow-elegant)" }}
             />
           </section>
@@ -89,7 +89,7 @@ const Index = () => {
                       }`}
                       style={
                         d === 7
-                          ? { color: "hsl(38 65% 30%)", fontSize: "0.95rem" }
+                          ? { color: "hsl(0 0% 0%)", fontSize: "0.95rem" }
                           : {}
                       }
                     >
