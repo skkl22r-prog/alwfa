@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import Reveal from "./Reveal";
 
 // 👈 عدّل رقم الواتساب هنا (بصيغة دولية بدون + أو 00). مثال السعودية: 9665XXXXXXXX
-const HOST_WHATSAPP = "9665XXXXXXXX";
+const HOST_WHATSAPP = "966554129943";
 
 const DEVICE_KEY = "rsvp_device_id";
 const getDeviceId = () => {
