@@ -123,8 +123,8 @@ const Index = () => {
             <Reveal delay={100}>
               <div className="text-center mb-6">
                 <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
-                <div className="font-arabic text-2xl text-primary">الريتز - كارلتون</div>
-                <div className="font-arabic text-lg text-muted-foreground mt-1">جدة</div>
+                <div className="font-arabic text-2xl text-primary">فندق الريتز - كارلتون</div>
+                <div className="font-arabic text-lg text-muted-foreground mt-1">الرياض</div>
               </div>
             </Reveal>
             <Reveal delay={200}>
@@ -136,8 +136,8 @@ const Index = () => {
                 }}
               >
                 <iframe
-                  title="موقع الحفل"
-                  src="https://www.google.com/maps?q=Jeddah&output=embed"
+                  title="موقع الحفل - فندق الريتز كارلتون الرياض"
+                  src="https://www.google.com/maps?q=The+Ritz-Carlton+Riyadh&output=embed"
                   width="100%"
                   height="320"
                   loading="lazy"
@@ -173,7 +173,7 @@ const Index = () => {
             </Reveal>
             <div className="relative max-w-xl mx-auto">
               <div
-                className="absolute top-6 bottom-6 left-6 w-px"
+                className="absolute top-6 bottom-6 right-6 w-px"
                 style={{ background: "hsl(42 75% 55% / 0.5)" }}
               />
               <div className="space-y-6">
@@ -183,9 +183,9 @@ const Index = () => {
                   { icon: Camera, text: "يمنع دخول جوالات الكاميرا" },
                 ].map((d, i) => (
                   <Reveal key={i} delay={i * 120}>
-                    <div className="relative pl-16">
+                    <div className="relative pr-16">
                       <div
-                        className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center z-10"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center z-10"
                         style={{
                           background: "hsl(40 50% 95%)",
                           border: "2px solid hsl(42 75% 50%)",
