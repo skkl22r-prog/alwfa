@@ -59,7 +59,7 @@ const RSVP = () => {
         ? `🌸 تأكيد حضور حفل زفاف راشد و سارة\nالاسم: ${guestName}\nالحالة: سأحضر بإذن الله`
         : `🌸 رد على دعوة حفل زفاف راشد و سارة\nالاسم: ${guestName}\nالحالة: للأسف لن أتمكن من الحضور`;
     const url = `https://wa.me/${HOST_WHATSAPP}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank");
+    window.location.href = url;
   };
 
   // ===== Render states =====
