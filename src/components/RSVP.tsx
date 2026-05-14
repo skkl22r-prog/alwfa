@@ -12,7 +12,6 @@ type State =
   | { kind: "loading" }
   | { kind: "attending"; name: string; token: string }
   | { kind: "declined"; name: string }
-  | { kind: "full" }
   | { kind: "error"; msg: string };
 
 const RSVP = () => {
@@ -35,11 +34,6 @@ const RSVP = () => {
     });
 
     if (error) {
-      const msg = (error.message || "").toLowerCase();
-      if (msg.includes("rsvp_full")) {
-        setState({ kind: "full" });
-        return;
-      }
       setState({ kind: "error", msg: "حدث خطأ، حاول مرة أخرى" });
       return;
     }
@@ -149,27 +143,6 @@ const RSVP = () => {
             <Send className="w-4 h-4" />
             أرسل الاعتذار عبر واتساب
           </button>
-        </div>
-      </Reveal>
-    );
-  }
-
-  if (state.kind === "full") {
-    return (
-      <Reveal>
-        <div
-          className="mx-auto max-w-md rounded-2xl p-8 text-center backdrop-blur-md"
-          style={{
-            background: "hsla(40, 50%, 95%, 0.7)",
-            border: "1.5px solid hsl(42 75% 55% / 0.5)",
-            boxShadow: "var(--shadow-soft)",
-          }}
-        >
-          <p className="font-arabic text-lg text-primary leading-loose">
-            نظراً لمحدودية المقاعد، تم اكتمال العدد المخصص للدعوات
-            <br />
-            شاكرين لكم محبتكم وتقديركم ❤️❤️
-          </p>
         </div>
       </Reveal>
     );
