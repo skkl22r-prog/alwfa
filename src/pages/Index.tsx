@@ -155,17 +155,6 @@ const Index = () => {
             <Timeline />
           </section>
 
-          {/* RSVP */}
-          <section className="px-4 py-16">
-            <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-2">أكّد حضورك</h2>
-              <p className="text-center font-arabic text-sm text-muted-foreground mb-10">
-                نتشرف بحضوركم — سيتم إصدار باركود خاص لكل ضيف
-              </p>
-            </Reveal>
-            <RSVP />
-          </section>
-
           {/* Details */}
           <section className="px-4 py-16">
             <Reveal>
@@ -215,6 +204,17 @@ const Index = () => {
                 ))}
               </div>
             </div>
+          </section>
+
+          {/* RSVP */}
+          <section className="px-4 py-16">
+            <Reveal>
+              <h2 className="text-center font-arabic text-3xl text-primary mb-2">أكّد حضورك</h2>
+              <p className="text-center font-arabic text-sm text-muted-foreground mb-10">
+                نتشرف بحضوركم — سيتم إصدار باركود خاص لكل ضيف
+              </p>
+            </Reveal>
+            <RSVP />
           </section>
 
           {/* Footer */}

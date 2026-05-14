@@ -46,10 +46,11 @@ const RSVP = () => {
 
     if (choice === "attending" && token) {
       setState({ kind: "attending", name: name.trim(), token });
-      sendWhatsApp("attending", name.trim());
+      // Delay so user sees the QR before being redirected to WhatsApp
+      setTimeout(() => sendWhatsApp("attending", name.trim()), 8000);
     } else {
       setState({ kind: "declined", name: name.trim() });
-      sendWhatsApp("declined", name.trim());
+      setTimeout(() => sendWhatsApp("declined", name.trim()), 4000);
     }
   };
 
@@ -75,7 +76,10 @@ const RSVP = () => {
             boxShadow: "var(--shadow-elegant), 0 0 40px hsl(42 80% 60% / 0.3)",
           }}
         >
-          <div className="font-arabic text-2xl text-primary mb-2">
+          <div className="font-arabic text-2xl text-primary mb-2" style={{ fontWeight: 700 }}>
+            تم تأكيد حضورك بنجاح 🌸
+          </div>
+          <div className="font-arabic text-base text-primary mb-2">
             أهلاً وسهلاً، {state.name}
           </div>
           <p className="font-arabic text-sm text-muted-foreground mb-6">
@@ -97,8 +101,19 @@ const RSVP = () => {
               bgColor="white"
             />
           </div>
-          <p className="font-arabic text-xs text-muted-foreground mt-4">
-            احتفظ بهذه الصفحة على جوالك وسنراك في الحفل
+          <div
+            className="mt-5 rounded-xl px-4 py-3 font-arabic text-sm"
+            style={{
+              background: "hsla(0, 70%, 55%, 0.1)",
+              border: "1.5px solid hsl(0 70% 55% / 0.6)",
+              color: "hsl(0 70% 35%)",
+              fontWeight: 600,
+            }}
+          >
+            ⚠️ يرجى حفظ الباركود لأنه مطلوب عند الدخول
+          </div>
+          <p className="font-arabic text-xs text-muted-foreground mt-3">
+            سيتم تحويلك إلى الواتساب خلال لحظات لإرسال التأكيد...
           </p>
         </div>
       </Reveal>
