@@ -101,8 +101,19 @@ const RSVP = () => {
               bgColor="white"
             />
           </div>
-          <p className="font-arabic text-xs text-muted-foreground mt-4">
-            احتفظ بهذه الصفحة على جوالك وسنراك في الحفل
+          <div
+            className="mt-5 rounded-xl px-4 py-3 font-arabic text-sm"
+            style={{
+              background: "hsla(0, 70%, 55%, 0.1)",
+              border: "1.5px solid hsl(0 70% 55% / 0.6)",
+              color: "hsl(0 70% 35%)",
+              fontWeight: 600,
+            }}
+          >
+            ⚠️ يرجى حفظ الباركود لأنه مطلوب عند الدخول
+          </div>
+          <p className="font-arabic text-xs text-muted-foreground mt-3">
+            سيتم تحويلك إلى الواتساب خلال لحظات لإرسال التأكيد...
           </p>
         </div>
       </Reveal>
