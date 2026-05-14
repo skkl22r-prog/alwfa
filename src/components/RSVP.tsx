@@ -46,10 +46,11 @@ const RSVP = () => {
 
     if (choice === "attending" && token) {
       setState({ kind: "attending", name: name.trim(), token });
-      sendWhatsApp("attending", name.trim());
+      // Delay so user sees the QR before being redirected to WhatsApp
+      setTimeout(() => sendWhatsApp("attending", name.trim()), 8000);
     } else {
       setState({ kind: "declined", name: name.trim() });
-      sendWhatsApp("declined", name.trim());
+      setTimeout(() => sendWhatsApp("declined", name.trim()), 4000);
     }
   };
 
