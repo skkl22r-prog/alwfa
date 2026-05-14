@@ -12,7 +12,6 @@ type State =
   | { kind: "loading" }
   | { kind: "attending"; name: string; token: string }
   | { kind: "declined"; name: string }
-  | { kind: "full" }
   | { kind: "error"; msg: string };
 
 const RSVP = () => {
