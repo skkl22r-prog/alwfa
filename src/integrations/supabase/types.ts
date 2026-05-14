@@ -49,7 +49,13 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      scan_rsvp: {
+        Args: { _token: string }
+        Returns: {
+          guest_name: string
+          result: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never

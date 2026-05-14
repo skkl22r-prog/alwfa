@@ -90,7 +90,7 @@ const RSVP = () => {
             }}
           >
             <QRCodeSVG
-              value={state.token}
+              value={`${window.location.origin}/scan/${state.token}`}
               size={200}
               level="H"
               fgColor="hsl(38, 65%, 30%)"
