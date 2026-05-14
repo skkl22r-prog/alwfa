@@ -76,7 +76,10 @@ const RSVP = () => {
             boxShadow: "var(--shadow-elegant), 0 0 40px hsl(42 80% 60% / 0.3)",
           }}
         >
-          <div className="font-arabic text-2xl text-primary mb-2">
+          <div className="font-arabic text-2xl text-primary mb-2" style={{ fontWeight: 700 }}>
+            تم تأكيد حضورك بنجاح 🌸
+          </div>
+          <div className="font-arabic text-base text-primary mb-2">
             أهلاً وسهلاً، {state.name}
           </div>
           <p className="font-arabic text-sm text-muted-foreground mb-6">
