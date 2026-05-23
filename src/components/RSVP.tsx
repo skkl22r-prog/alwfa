@@ -30,9 +30,10 @@ const RSVP = () => {
   .from("invites")
   .insert({
     name: name.trim(),
-    status: choice,
+    status: "attending", // نخليه ثابت للتجربة
     device_id: deviceId,
-    qr_token: token,
+    qr_token: token ?? null,
+    used: false
   });
 
 console.log("SUPABASE ERROR:", error);
