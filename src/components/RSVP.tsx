@@ -27,7 +27,7 @@ const RSVP = () => {
     const token = choice === "attending" ? crypto.randomUUID() : null;
 
     const { data, error } = await supabase
-  .from("rsvps")
+  .from("invites")
   .insert({
     name: name.trim(),
     status: choice,
