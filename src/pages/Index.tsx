@@ -42,6 +42,23 @@ const Index = () => {
       {!opened && <Envelope onOpen={() => setOpened(true)} />}
 
       {opened && (
+        <div
+          aria-hidden={!atTop}
+          className={`fixed bottom-5 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-1 transition-opacity duration-500 pointer-events-none ${
+            atTop ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <span className="font-arabic text-sm text-primary" style={{ fontWeight: 600 }}>
+            مرر للأسفل
+          </span>
+          <ChevronDown
+            className="w-6 h-6 animate-float-slow"
+            style={{ color: "hsl(42 75% 45%)" }}
+          />
+        </div>
+      )}
+
+      {opened && (
         <main className="relative z-10">
           <section className="min-h-screen flex items-center justify-center">
             <img
