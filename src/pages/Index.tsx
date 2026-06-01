@@ -48,7 +48,7 @@ const Index = () => {
             atTop ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span className="font-arabic text-sm text-primary" style={{ fontWeight: 600 }}>
+          <span className="font-arabic text-sm text-primary" style={{ "#F5E6CC" }}>
             مرر للأسفل
           </span>
           <ChevronDown
