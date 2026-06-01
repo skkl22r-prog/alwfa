@@ -51,11 +51,13 @@ const Index = () => {
           <span
   className="font-arabic text-sm text-primary"
   style={{
-    color: "#D4AF37",
+    color: "#ffffff",
+    fontSize: "15px",
+    fontWeight: 600,
     textShadow: `
-      0 0 3px rgba(255, 255, 255, 0.6),
-      0 0 8px rgba(212, 175, 55, 0.8),
-      0 0 15px rgba(212, 175, 55, 0.6)
+      0 0 4px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 15px rgba(212, 175, 55, 0.25)
     `
   }}
 >
@@ -65,10 +67,12 @@ const Index = () => {
 <ChevronDown
   className="w-6 h-6 animate-float-slow"
   style={{
-    color: "#D4AF37",
+    color: "#ffffff",
+    width: "28px",
+    height: "28px",
     filter: `
-      drop-shadow(0 0 3px rgba(255, 255, 255, 0.5))
-      drop-shadow(0 0 10px rgba(212, 175, 55, 0.7))
+      drop-shadow(0 0 5px rgba(255, 255, 255, 0.8))
+      drop-shadow(0 0 10px rgba(255, 255, 255, 0.4))
     `
   }}
 />
