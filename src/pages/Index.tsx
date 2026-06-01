@@ -53,7 +53,7 @@ const Index = () => {
           </span>
           <ChevronDown
             className="w-6 h-6 animate-float-slow"
-            style={{ color: "hsl(42 75% 45%)" }}
+            style={{ color: "#F8EAD3" }}
           />
         </div>
       )}
@@ -63,7 +63,7 @@ const Index = () => {
           <section className="min-h-screen flex items-center justify-center">
             <img
               src={invitationImg}
-              alt="دعوة زفاف راشد و سارة"
+              alt="دعوة زفاف غيوض"
               className="w-screen h-auto max-w-none animate-fade-in"
               style={{ boxShadow: "var(--shadow-elegant)" }}
             />
