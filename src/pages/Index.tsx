@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { MapPin, Heart, QrCode, Baby, Camera } from "lucide-react";
+import { MapPin, Heart, Baby, Camera } from "lucide-react";
 import invitationImg from "@/assets/invitation.jpg";
 import Envelope from "@/components/Envelope";
 import SprayParticles from "@/components/SprayParticles";
 import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import Timeline from "@/components/Timeline";
-import RSVP from "@/components/RSVP";
 import MusicToggle from "@/components/MusicToggle";
 
 const Index = () => {
