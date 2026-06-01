@@ -52,7 +52,11 @@ const Index = () => {
   className="font-arabic text-sm text-primary"
   style={{
     color: "#D4AF37",
-    textShadow: "0 0 10px rgba(212, 175, 55, 0.6)"
+    textShadow: `
+      0 0 3px rgba(255, 255, 255, 0.6),
+      0 0 8px rgba(212, 175, 55, 0.8),
+      0 0 15px rgba(212, 175, 55, 0.6)
+    `
   }}
 >
   مرر للأسفل
@@ -62,7 +66,10 @@ const Index = () => {
   className="w-6 h-6 animate-float-slow"
   style={{
     color: "#D4AF37",
-    filter: "drop-shadow(0 0 10px rgba(212, 175, 55, 0.6))"
+    filter: `
+      drop-shadow(0 0 3px rgba(255, 255, 255, 0.5))
+      drop-shadow(0 0 10px rgba(212, 175, 55, 0.7))
+    `
   }}
 />
         </div>
