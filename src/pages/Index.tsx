@@ -48,12 +48,12 @@ const Index = () => {
             atTop ? "opacity-100" : "opacity-0"
           }`}
         >
-          <span className="font-arabic text-sm text-primary" style={{ color: "#F8EAD3" }}>
+          <span className="font-arabic text-sm text-primary" style={{ color: "#313429" }}>
             مرر للأسفل
           </span>
           <ChevronDown
             className="w-6 h-6 animate-float-slow"
-            style={{ color: "#F8EAD3" }}
+            style={{ color: "#313429" }}
           />
         </div>
       )}
