@@ -44,7 +44,7 @@ const Index = () => {
             />
           </section>
 
-          {/* Calendar block — date 7/7/2026 with heart strikethrough */}
+          {/* Calendar block — date 1/7/2026 with heart strikethrough */}
           <section className="px-4 py-16">
             <Reveal>
               <div
@@ -64,7 +64,7 @@ const Index = () => {
                     fontWeight: 600,
                   }}
                 >
-                  <span>Tuesday</span>
+                  <span>Wednesday</span>
                   <span>July</span>
                   <span>2026</span>
                 </div>
@@ -85,10 +85,10 @@ const Index = () => {
                     <div
                       key={i}
                       className={`aspect-square flex items-center justify-center rounded ${
-                        d === 7 ? "heart-strike relative font-bold" : ""
+                        d === 1 ? "heart-strike relative font-bold" : ""
                       }`}
                       style={
-                        d === 7
+                        d === 1
                           ? { color: "hsl(0 0% 0%)", fontSize: "0.95rem" }
                           : {}
                       }
@@ -99,7 +99,10 @@ const Index = () => {
                 </div>
 
                 <div className="font-arabic text-base mt-4 text-primary" style={{ fontWeight: 600 }}>
-                  الثلاثاء 7 يوليو 2026
+                  الأربعاء 1 يوليو 2026
+                </div>
+                <div className="font-arabic text-base mt-1 text-primary" style={{ fontWeight: 600 }}>
+                  16 محرم 1448
                 </div>
               </div>
             </Reveal>
