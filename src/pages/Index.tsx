@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { MapPin, Heart, Baby, Camera } from "lucide-react";
+import { useState, useEffect } from "react";
+import { MapPin, Heart, Baby, Camera, ChevronDown, Navigation } from "lucide-react";
 import invitationImg from "@/assets/invitation.jpg";
 import Envelope from "@/components/Envelope";
 import SprayParticles from "@/components/SprayParticles";
@@ -10,6 +10,15 @@ import MusicToggle from "@/components/MusicToggle";
 
 const Index = () => {
   const [opened, setOpened] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+
+  useEffect(() => {
+    if (!opened) return;
+    const onScroll = () => setAtTop(window.scrollY < 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [opened]);
 
   return (
     <div
