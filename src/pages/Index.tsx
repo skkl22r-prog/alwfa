@@ -51,8 +51,8 @@ const Index = () => {
           <span
   className="font-arabic text-sm text-primary"
   style={{
-    color: "#313429",
-    textShadow: "0 0 6px rgba(49, 52, 41, 0.25)"
+    color: "#D4AF37",
+    textShadow: "0 0 10px rgba(212, 175, 55, 0.6)"
   }}
 >
   مرر للأسفل
@@ -61,8 +61,8 @@ const Index = () => {
 <ChevronDown
   className="w-6 h-6 animate-float-slow"
   style={{
-    color: "#313429",
-    filter: "drop-shadow(0 0 6px rgba(49, 52, 41, 0.25))"
+    color: "#D4AF37",
+    filter: "drop-shadow(0 0 10px rgba(212, 175, 55, 0.6))"
   }}
 />
         </div>
