@@ -54,10 +54,16 @@ const Index = () => {
     color: "#ffffff",
     fontSize: "15px",
     fontWeight: 600,
+
     textShadow: `
       0 0 4px rgba(255, 255, 255, 0.8),
       0 0 10px rgba(255, 255, 255, 0.5),
-      0 0 15px rgba(212, 175, 55, 0.25)
+      0 0 15px rgba(212, 175, 55, 0.25),
+
+      -0.5px 0 0 #313429,
+      0.5px 0 0 #313429,
+      0 -0.5px 0 #313429,
+      0 0.5px 0 #313429
     `
   }}
 >
