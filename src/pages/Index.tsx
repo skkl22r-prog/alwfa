@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { MapPin, Heart, Baby, Camera } from "lucide-react";
+import { useState, useEffect } from "react";
+import { MapPin, Heart, Baby, Camera, ChevronDown, Navigation } from "lucide-react";
 import invitationImg from "@/assets/invitation.jpg";
 import Envelope from "@/components/Envelope";
 import SprayParticles from "@/components/SprayParticles";
@@ -10,6 +10,15 @@ import MusicToggle from "@/components/MusicToggle";
 
 const Index = () => {
   const [opened, setOpened] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+
+  useEffect(() => {
+    if (!opened) return;
+    const onScroll = () => setAtTop(window.scrollY < 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [opened]);
 
   return (
     <div
@@ -31,6 +40,23 @@ const Index = () => {
       <SprayParticles />
       <MusicToggle active={opened} />
       {!opened && <Envelope onOpen={() => setOpened(true)} />}
+
+      {opened && (
+        <div
+          aria-hidden={!atTop}
+          className={`fixed bottom-5 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-1 transition-opacity duration-500 pointer-events-none ${
+            atTop ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <span className="font-arabic text-sm text-primary" style={{ fontWeight: 600 }}>
+            مرر للأسفل
+          </span>
+          <ChevronDown
+            className="w-6 h-6 animate-float-slow"
+            style={{ color: "hsl(42 75% 45%)" }}
+          />
+        </div>
+      )}
 
       {opened && (
         <main className="relative z-10">
@@ -155,7 +181,24 @@ const Index = () => {
                   style={{ border: 0 }}
                 />
               </div>
+              <div className="max-w-2xl mx-auto mt-3 flex justify-end pr-2">
+                <a
+                  href="https://maps.app.goo.gl/pGofHbeiW7dVu8dx9?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="افتح الموقع في خرائط Google"
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style={{
+                    background: "hsl(40 50% 95%)",
+                    border: "1.5px solid hsl(42 75% 50%)",
+                    boxShadow: "0 0 14px hsl(42 80% 60% / 0.35)",
+                  }}
+                >
+                  <Navigation className="w-5 h-5" style={{ color: "hsl(42 75% 45%)" }} />
+                </a>
+              </div>
             </Reveal>
+
           </section>
 
           {/* Program timeline */}
