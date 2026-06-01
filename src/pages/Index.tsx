@@ -126,8 +126,17 @@ const Index = () => {
             <Reveal delay={100}>
               <div className="text-center mb-6">
                 <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
-                <div className="font-arabic text-2xl text-primary">فندق الريتز - كارلتون</div>
+                <div className="font-arabic text-2xl text-primary">قاعة الفخامة</div>
                 <div className="font-arabic text-lg text-muted-foreground mt-1">الرياض</div>
+                <a
+                  href="https://maps.app.goo.gl/pGofHbeiW7dVu8dx9?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 font-arabic text-sm underline underline-offset-4"
+                  style={{ color: "hsl(42 75% 45%)" }}
+                >
+                  افتح الموقع في خرائط Google
+                </a>
               </div>
             </Reveal>
             <Reveal delay={200}>
@@ -139,8 +148,8 @@ const Index = () => {
                 }}
               >
                 <iframe
-                  title="موقع الحفل - فندق الريتز كارلتون الرياض"
-                  src="https://www.google.com/maps?q=The+Ritz-Carlton+Riyadh&output=embed"
+                  title="موقع الحفل - قاعة الفخامة الرياض"
+                  src="https://www.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D9%85%D8%A9+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6&output=embed"
                   width="100%"
                   height="320"
                   loading="lazy"
@@ -170,8 +179,7 @@ const Index = () => {
               />
               <div className="space-y-6">
                 {[
-                  { icon: QrCode, text: "يرجى إبراز الباركود عند الدخول" },
-                  { icon: Baby, text: "يمنع اصطحاب الأطفال" },
+                  { icon: Baby, text: "جنة الأطفال منازلهم" },
                   { icon: Camera, text: "يمنع دخول جوالات الكاميرا" },
                 ].map((d, i) => (
                   <Reveal key={i} delay={i * 120}>
@@ -208,16 +216,6 @@ const Index = () => {
               </div>
             </div>
           </section>
-
-          {/* RSVP */}
-          <section className="px-4 py-16">
-            <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-2">أكّد حضورك</h2>
-              <p className="text-center font-arabic text-sm text-muted-foreground mb-10">
-                نتشرف بحضوركم — سيتم إصدار باركود خاص لكل ضيف
-              </p>
-            </Reveal>
-            <RSVP />
           </section>
 
           {/* Footer */}
