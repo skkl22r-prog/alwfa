@@ -164,7 +164,24 @@ const Index = () => {
                   style={{ border: 0 }}
                 />
               </div>
+              <div className="max-w-2xl mx-auto mt-3 flex justify-end pr-2">
+                <a
+                  href="https://maps.app.goo.gl/pGofHbeiW7dVu8dx9?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="افتح الموقع في خرائط Google"
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style={{
+                    background: "hsl(40 50% 95%)",
+                    border: "1.5px solid hsl(42 75% 50%)",
+                    boxShadow: "0 0 14px hsl(42 80% 60% / 0.35)",
+                  }}
+                >
+                  <Navigation className="w-5 h-5" style={{ color: "hsl(42 75% 45%)" }} />
+                </a>
+              </div>
             </Reveal>
+
           </section>
 
           {/* Program timeline */}
