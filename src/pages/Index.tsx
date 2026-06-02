@@ -200,21 +200,21 @@ const Index = () => {
                 }}
               >
                 <iframe
-                  title="موقع الحفل - قاعة الفخامة الرياض"
-                  src="https://www.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D9%85%D8%A9+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6&output=embed"
+                  title="موقع الحفل - قاعة الفخامة للاحتفالات والمؤتمرات"
+                  src="https://www.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D9%85%D8%A9+%D9%84%D9%84%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D9%84%D8%A7%D8%AA+%D9%88%D8%A7%D9%84%D9%85%D8%A4%D8%AA%D9%85%D8%B1%D8%A7%D8%AA%D8%8C+%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D9%84%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+13267&output=embed"
                   width="100%"
                   height="320"
                   loading="lazy"
                   style={{ border: 0 }}
                 />
               </div>
-              <div className="max-w-2xl mx-auto mt-3 flex justify-end pr-2">
+              <div className="max-w-2xl mx-auto mt-3 flex justify-center">
                 <a
-                  href="https://maps.app.goo.gl/pGofHbeiW7dVu8dx9?g_st=ic"
+                  href="https://maps.app.goo.gl/2sM3JYFVTEuBwKF57?g_st=iw"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="افتح الموقع في خرائط Google"
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  className="inline-flex items-center gap-2 px-4 h-10 rounded-full transition-transform hover:scale-105"
                   style={{
                     background: "hsl(40 50% 95%)",
                     border: "1.5px solid hsl(42 75% 50%)",
@@ -222,9 +222,13 @@ const Index = () => {
                   }}
                 >
                   <Navigation className="w-5 h-5" style={{ color: "hsl(42 75% 45%)" }} />
+                  <span className="font-arabic text-sm" style={{ color: "hsl(42 75% 35%)", fontWeight: 600 }}>
+                    اضغط هنا
+                  </span>
                 </a>
               </div>
             </Reveal>
+
 
           </section>
 
