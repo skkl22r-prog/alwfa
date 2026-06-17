@@ -24,9 +24,11 @@ const Index = () => {
     <div
       className="relative min-h-screen overflow-x-hidden"
       style={{
-        background:
-          "linear-gradient(180deg, hsl(40 50% 92%) 0%, hsl(38 45% 86%) 50%, hsl(35 42% 80%) 100%)",
-      }}
+  backgroundImage: `url(${invitationImg})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+}}
     >
       {/* Ornamental gold damask pattern background */}
       <div
