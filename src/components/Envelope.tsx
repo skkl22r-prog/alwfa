@@ -21,11 +21,8 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
     <div
       className="fixed inset-0 -z-10"
       style={{
-        backgroundImage: `url(${invitationImg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+  background: `url(${invitationImg}) center/cover no-repeat`,
+}}
     />
 
     {/* كل الموقع (الظرف + الزخارف) */}
