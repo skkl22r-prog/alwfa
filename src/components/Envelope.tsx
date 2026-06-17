@@ -16,17 +16,21 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
   };
 
   return (
+<div
+  className="fixed inset-0 -z-10"
+  style={{
+    backgroundImage: `url(${invitationImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+/>
     <div
-      className="fixed inset-0 z-40 cursor-pointer overflow-hidden"
-style={{
-backgroundImage: `url(${invitationImg})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  perspective: "2000px",
-}}
-      onClick={trigger}
-    >
+  className="fixed inset-0 z-40 cursor-pointer overflow-hidden"
+  style={{
+    perspective: "2000px",
+  }}
+>
       {/* Revealed invitation underneath */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img src={invitationImg} alt="" className="max-h-[90vh] w-auto opacity-60" />
