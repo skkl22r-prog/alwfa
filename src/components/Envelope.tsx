@@ -19,7 +19,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
     <div
       className="fixed inset-0 z-40 cursor-pointer overflow-hidden"
 style={{
-backgroundImage: `url(${invitationImg})`,
+backgroundImage: `url(${bg})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
