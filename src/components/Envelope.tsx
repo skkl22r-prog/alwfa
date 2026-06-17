@@ -16,8 +16,8 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
   };
 
   return (
-  <>
-    {/* Background layer */}
+  <div className="relative">
+    {/* الخلفية */}
     <div
       className="fixed inset-0 -z-10"
       style={{
@@ -28,7 +28,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
       }}
     />
 
-    {/* Main content */}
+    {/* كل الموقع (الظرف + الزخارف) */}
     <div
       className="fixed inset-0 z-40 cursor-pointer overflow-hidden"
       style={{
