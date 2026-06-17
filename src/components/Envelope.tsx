@@ -1,5 +1,5 @@
 import { useState } from "react";
-import invitationImg from "@/assets/invitation.jpg";
+import invitationImg from "@/assets/sarah1";
 import waxSeal from "@/assets/wax-seal.png";
 
 interface EnvelopeProps {
@@ -18,7 +18,13 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
   return (
     <div
       className="fixed inset-0 z-40 cursor-pointer overflow-hidden"
-      style={{ background: "hsl(30 35% 18%)", perspective: "2000px" }}
+style={{
+  backgroundImage: `url(${bg})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  perspective: "2000px",
+}}
       onClick={trigger}
     >
       {/* Revealed invitation underneath */}
