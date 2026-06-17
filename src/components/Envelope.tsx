@@ -1,5 +1,5 @@
 import { useState } from "react";
-import invitationImg from "@/assets/sarah1";
+import invitationImg from "@/assets/sarah1.jpg";
 import waxSeal from "@/assets/wax-seal.png";
 
 interface EnvelopeProps {
