@@ -39,10 +39,10 @@ const Countdown = () => {
             boxShadow: "var(--shadow-soft)",
           }}
         >
-          <div className="font-display text-3xl sm:text-4xl font-light text-primary tabular-nums">
+          <div className="font-display text-3xl sm:text-4xl font-light text-primary tabular-nums text-[#B36E71]">
             {String(it.v).padStart(2, "0")}
           </div>
-          <div className="text-xs uppercase tracking-widest mt-1 text-muted-foreground">
+          <div className="text-xs uppercase tracking-widest mt-1 text-[#B36E71]">
             {it.l}
           </div>
         </div>
