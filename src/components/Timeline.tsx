@@ -1,34 +1,15 @@
-import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
+import { Baby, Camera } from "lucide-react";
 
-const Timeline = ({ events = [] }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
+const events = [
+  { time: "6:00 PM", label: "الاستقبال" },
+  { time: "7:00 PM", label: "الزفة" },
+  { time: "8:00 PM", label: "العشاء" },
+];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-
-      const rect = containerRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      const total = rect.height;
-      const scrolled = Math.min(
-        Math.max(windowHeight - rect.top, 0),
-        total
-      );
-
-      setProgress(scrolled / total);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const Timeline = () => {
   return (
-    <div ref={containerRef} className="relative max-w-2xl mx-auto py-8">
+    <div className="relative max-w-2xl mx-auto py-8">
 
       {/* الخط */}
       <div
@@ -36,28 +17,25 @@ const Timeline = ({ events = [] }) => {
         style={{ background: "#ffffff", opacity: 0.4 }}
       />
 
-      {/* الدائرة المتحركة */}
-      <div
-        className="absolute right-1/2 w-3 h-3 rounded-full"
-        style={{
-          top: `${progress * 100}%`,
-          transform: "translate(-50%, -50%)",
-          background: "#B36E71",
-          boxShadow: "0 0 12px rgba(179,110,113,0.6)",
-        }}
-      />
-
-      {/* المحتوى */}
       <div className="space-y-10">
         {events.map((e, i) => (
           <Reveal key={i} delay={i * 120}>
-            <div className="flex items-center justify-between px-6 py-4">
+            <div className="flex items-center justify-between px-6">
 
               <div className="w-1/3 text-left text-white">
                 {e.time}
               </div>
 
-              <div className="w-1/3" />
+              {/* الدائرة */}
+              <div className="w-1/3 flex justify-center">
+                <div
+                  className="w-3 h-3 rounded-full"
+                  style={{
+                    background: "#B36E71",
+                    boxShadow: "0 0 10px rgba(179,110,113,0.6)",
+                  }}
+                />
+              </div>
 
               <div className="w-1/3 text-right text-white">
                 {e.label}
