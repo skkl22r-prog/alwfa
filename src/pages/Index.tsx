@@ -182,24 +182,26 @@ border: "1.5px solid #B36E71",
           </section>
 
           {/* Countdown */}
-          <section className="px-4 py-16">
-            <Reveal>
-             <div className="flex justify-center mb-10">
-  <h2
-  className="font-arabic text-3xl px-8 py-3 rounded-full"
-  style={{
-    color: "#B36E71",
-    background: "rgba(255,255,255,0.15)",
-    boxShadow: "0 0 12px rgba(179,110,113,0.25)",
-  }}
->
-  العد التنازلي
-</h2>
-            </Reveal>
-            <Reveal delay={150}>
-              <Countdown />
-            </Reveal>
-          </section>
+<section className="px-4 py-16">
+  <Reveal>
+    <div className="flex justify-center mb-10">
+      <h2
+        className="font-arabic text-3xl px-8 py-3 rounded-full"
+        style={{
+          color: "#B36E71",
+          background: "rgba(255,255,255,0.15)",
+          boxShadow: "0 0 12px rgba(179,110,113,0.25)",
+        }}
+      >
+        العد التنازلي
+      </h2>
+    </div>
+  </Reveal>
+
+  <Reveal delay={150}>
+    <Countdown />
+  </Reveal>
+</section>
 
           {/* Venue */}
           <section className="px-4 py-16">
