@@ -149,9 +149,11 @@ const Index = () => {
                       style={
   d === 27
     ? {
-        color: "#8A4E5C",
-        fontWeight: "bold",
+        color: "#5E2F3A",
+        fontWeight: "700",
         fontSize: "0.95rem",
+        position: "relative",
+        zIndex: 2,
       }
     : {}
 }
