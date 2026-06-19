@@ -153,10 +153,22 @@ const Index = () => {
                   ))}
                 </div>
 
-                <div className="font-arabic text-base mt-4 text-primary" style={{ fontWeight: 600 }}>
+<div
+  className="font-arabic text-base mt-4"
+  style={{
+    fontWeight: 600,
+    color: "#B36E71",
+  }}
+>
                   الاثنين 27 يوليو 2026
                 </div>
-                <div className="font-arabic text-base mt-1 text-primary" style={{ fontWeight: 600 }}>
+<div
+  className="font-arabic text-base mt-4"
+  style={{
+    fontWeight: 600,
+    color: "#B36E71",
+  }}
+>
                   13 محرم 1448
                 </div>
               </div>
@@ -167,6 +179,7 @@ const Index = () => {
           <section className="px-4 py-16">
             <Reveal>
               <h2 className="text-center font-arabic text-3xl text-primary mb-10">العدّ التنازلي</h2>
+style={{ color: "#C27A8B" }}
             </Reveal>
             <Reveal delay={150}>
               <Countdown />
