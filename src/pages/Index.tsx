@@ -93,7 +93,7 @@ const Index = () => {
           <section className="min-h-screen flex items-center justify-center">
             <img
               src={invitationImg}
-              alt="دعوة زفاف غيوض"
+              alt="دعوة زفاف الوفاء"
               className="w-screen h-auto max-w-none animate-fade-in"
               style={{ boxShadow: "var(--shadow-elegant)" }}
             />
@@ -154,10 +154,10 @@ const Index = () => {
                 </div>
 
                 <div className="font-arabic text-base mt-4 text-primary" style={{ fontWeight: 600 }}>
-                  الأربعاء 1 يوليو 2026
+                  الاثنين 27 يوليو 2026
                 </div>
                 <div className="font-arabic text-base mt-1 text-primary" style={{ fontWeight: 600 }}>
-                  16 محرم 1448
+                  13 محرم 1448
                 </div>
               </div>
             </Reveal>
@@ -181,10 +181,10 @@ const Index = () => {
             <Reveal delay={100}>
               <div className="text-center mb-6">
                 <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
-                <div className="font-arabic text-2xl text-primary">قاعة الفخامة</div>
+                <div className="font-arabic text-2xl text-primary">قاعة شارلوت</div>
                 <div className="font-arabic text-lg text-muted-foreground mt-1">الرياض</div>
                 <a
-                  href="https://maps.app.goo.gl/pGofHbeiW7dVu8dx9?g_st=ic"
+                  href="https://maps.app.goo.gl/UFTMs2HpoFtUiYJ8?g_st=ic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 font-arabic text-sm underline underline-offset-4"
@@ -203,7 +203,7 @@ const Index = () => {
                 }}
               >
                 <iframe
-                  title="موقع الحفل - قاعة الفخامة للاحتفالات والمؤتمرات"
+                  title="موقع الحفل - قاعة شارلوت"
                   src="https://www.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D9%85%D8%A9+%D9%84%D9%84%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D9%84%D8%A7%D8%AA+%D9%88%D8%A7%D9%84%D9%85%D8%A4%D8%AA%D9%85%D8%B1%D8%A7%D8%AA%D8%8C+%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D9%84%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+13267&output=embed"
                   width="100%"
                   height="320"
