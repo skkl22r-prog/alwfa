@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MapPin, Heart, Baby, Camera, ChevronDown, Navigation } from "lucide-react";
-import invitationImg from "@/assets/sarah5.jpg";
-import backgroundImg from "@/assets/sarah3.jpg";
+import invitationImg from "@/assets/sarah22.jpg";
+import backgroundImg from "@/assets/sarah33.jpg";
 import Envelope from "@/components/Envelope";
 import SprayParticles from "@/components/SprayParticles";
 import Reveal from "@/components/Reveal";
