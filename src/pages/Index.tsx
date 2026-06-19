@@ -63,10 +63,6 @@ const Index = () => {
       0 0 10px rgba(255, 255, 255, 0.5),
       0 0 15px rgba(212, 175, 55, 0.25),
 
-      -0.5px 0 0 #313429,
-      0.5px 0 0 #313429,
-      0 -0.5px 0 #313429,
-      0 0.5px 0 #313429
     `
   }}
 >
@@ -106,7 +102,7 @@ const Index = () => {
                 className="mx-auto max-w-sm rounded-2xl p-6 text-center backdrop-blur-md"
                 style={{
   background: "rgba(255,255,255,0.8)",
-  border: "1.5px solid hsl(42 75% 55% / 0.5)",
+border: "1.5px solid #B36E71",
   boxShadow: "var(--shadow-soft)",
 }}
               >
@@ -190,7 +186,7 @@ const Index = () => {
             <Reveal>
               <h2
   className="text-center font-arabic text-3xl mb-10"
-  style={{ color: "#C27A8B" }}
+  style={{ color: "#ffffff" }}
 >
   العدّ التنازلي
 </h2>
@@ -203,7 +199,7 @@ const Index = () => {
           {/* Venue */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-8">موقع حفلنا</h2>
+              <h2 className="text-center font-arabic text-3xl text-primary mb-8 "style={{ color: "#ffffff" }}>موقع حفلنا</h2>
             </Reveal>
             <Reveal delay={100}>
               <div className="text-center mb-6">
@@ -257,7 +253,7 @@ const Index = () => {
           {/* Program timeline */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-6">برنامج الحفل</h2>
+              <h2 className="text-center font-arabic text-3xl text-primary mb-6" style={{ color: "#ffffff" }}>برنامج الحفل</h2>
             </Reveal>
             <Timeline />
           </section>
@@ -265,7 +261,7 @@ const Index = () => {
           {/* Details */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-10">تفاصيل الحفل</h2>
+              <h2 className="text-center font-arabic text-3xl text-primary mb-10" style={{ color: "#ffffff" }}>تفاصيل الحفل</h2>
             </Reveal>
             <div className="relative max-w-xl mx-auto">
               <div
