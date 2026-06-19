@@ -107,14 +107,14 @@ const Index = () => {
                 style={{
                   background: "hsla(40, 50%, 95%, 0.65)",
                   border: "1.5px solid hsl(42 75% 55% / 0.5)",
-                  boxShadow: "var(--shadow-soft)",
+background: "rgba(255,255,255,0.8)"
                 }}
               >
                 <div
                   className="flex justify-between items-center font-display text-sm mb-3 px-2 py-2 rounded-lg"
                   dir="ltr"
                   style={{
-                    background: "linear-gradient(135deg, hsl(45 80% 60%), hsl(38 70% 45%))",
+background: "linear-gradient(135deg,#DFA6B2,#C27A8B)"
                     color: "hsl(30 40% 18%)",
                     fontWeight: 600,
                   }}
@@ -183,15 +183,7 @@ const Index = () => {
                 <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
                 <div className="font-arabic text-2xl text-primary">قاعة شارلوت</div>
                 <div className="font-arabic text-lg text-muted-foreground mt-1">تبوك</div>
-                <a
-                  href="https://maps.app.goo.gl/UFTMs2HpoFtUiYJ8?g_st=ic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-3 font-arabic text-sm underline underline-offset-4"
-                  style={{ color: "hsl(42 75% 45%)" }}
-                >
-                  افتح الموقع في خرائط Google
-                </a>
+              
               </div>
             </Reveal>
             <Reveal delay={200}>
@@ -204,7 +196,7 @@ const Index = () => {
               >
                 <iframe
                   title="موقع الحفل - قاعة شارلوت"
-                  src="https://www.google.com/maps?q=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D9%85%D8%A9+%D9%84%D9%84%D8%A7%D8%AD%D8%AA%D9%81%D8%A7%D9%84%D8%A7%D8%AA+%D9%88%D8%A7%D9%84%D9%85%D8%A4%D8%AA%D9%85%D8%B1%D8%A7%D8%AA%D8%8C+%D8%A7%D9%84%D8%B1%D9%85%D8%A7%D9%84%D8%8C+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6+13267&output=embed"
+                  src="https://maps.app.goo.gl/UFTMs2HUpoFtUiYJ8?g_st=ic"
                   width="100%"
                   height="320"
                   loading="lazy"
@@ -213,7 +205,7 @@ const Index = () => {
               </div>
               <div className="max-w-2xl mx-auto mt-3 flex justify-center">
                 <a
-                  href="https://maps.app.goo.gl/2sM3JYFVTEuBwKF57?g_st=iw"
+                  href="https://maps.app.goo.gl/UFTMs2HUpoFtUiYJ8?g_st=ic"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="افتح الموقع في خرائط Google"
