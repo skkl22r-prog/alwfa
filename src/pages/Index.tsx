@@ -184,7 +184,7 @@ border: "1.5px solid #B36E71",
           {/* Countdown */}
           <section className="px-4 py-16">
             <Reveal>
-              <div className="flex justify-center mb-10">
+             <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
     style={{
