@@ -184,18 +184,24 @@ border: "1.5px solid #B36E71",
           {/* Countdown */}
           <section className="px-4 py-16">
             <Reveal>
-              <div className="flex justify-center mb-10">
+              <div className="flex items-center gap-2 justify-center">
+  
+  {/* الأيقونة بدون حدود */}
+  <Icon style={{ color: "#B36E71" }} />
+
+  {/* العنوان فقط عليه حدود */}
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
-style={{
-  color: "#ffffff",
-  background: "rgba(255,255,255,0.15)",
-  border: "1.5px solid #B36E71",
-  boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-}}
+    style={{
+      color: "#ffffff",
+      background: "rgba(255,255,255,0.15)",
+      border: "1.5px solid #B36E71",
+      boxShadow: "0 0 12px rgba(179,110,113,0.25)",
+    }}
   >
-    العدّ التنازلي
+    العد التنازلي
   </h2>
+
 </div>
             </Reveal>
             <Reveal delay={150}>
