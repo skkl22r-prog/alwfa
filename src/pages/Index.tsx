@@ -178,8 +178,12 @@ const Index = () => {
           {/* Countdown */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-10">العدّ التنازلي</h2>
-style={{ color: "#C27A8B" }}
+              <h2
+  className="text-center font-arabic text-3xl mb-10"
+  style={{ color: "#C27A8B" }}
+>
+  العدّ التنازلي
+</h2>
             </Reveal>
             <Reveal delay={150}>
               <Countdown />
@@ -208,13 +212,13 @@ style={{ color: "#C27A8B" }}
                 }}
               >
                 <iframe
-                  title="موقع الحفل - قاعة شارلوت"
-                  src="https://www.google.com/maps/place/%D9%85%D9%86%D8%B7%D9%82%D8%A9+%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9+47319%E2%80%AD/@28.463114,36.60849,16z/data=!4m6!3m5!1s0x15a84ccc9a551167:0x18aad07e6cccfec9!8m2!3d28.4646561!4d36.6111525!16s%2Fg%2F11h6q5251h?g_ep=Eg1tbF8yMDI2MDYxNF8wIOC7DCoASAJQAg%3D%3D"
-                  width="100%"
-                  height="320"
-                  loading="lazy"
-                  style={{ border: 0 }}
-                />
+  title="موقع الحفل - قاعة شارلوت"
+  src="https://www.google.com/maps?q=28.463114,36.608490&output=embed"
+  width="100%"
+  height="320"
+  loading="lazy"
+  style={{ border: 0 }}
+/>
               </div>
               <div className="max-w-2xl mx-auto mt-3 flex justify-center">
                 <a
