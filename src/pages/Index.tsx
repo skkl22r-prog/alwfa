@@ -186,17 +186,19 @@ border: "1.5px solid #B36E71",
             <Reveal>
              <div className="flex justify-center mb-10">
   <h2
-  className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
   style={{
+    all: "unset",
+    display: "inline-block",
+    padding: "12px 32px",
     color: "#ffffff",
     background: "rgba(255,255,255,0.15)",
     border: "1.5px solid #B36E71",
+    borderRadius: "9999px",
     boxShadow: "0 0 12px rgba(179,110,113,0.25)",
   }}
 >
   العد التنازلي
 </h2>
-</div>
             </Reveal>
             <Reveal delay={150}>
               <Countdown />
