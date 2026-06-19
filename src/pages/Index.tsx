@@ -187,12 +187,12 @@ border: "1.5px solid #B36E71",
               <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
-    style={{
-      color: "#ffffff",
-      background: "rgba(255,255,255,0.15)",
-      border: "1px solid rgba(255,255,255,0.25)",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-    }}
+style={{
+  color: "#ffffff",
+  background: "rgba(255,255,255,0.15)",
+  border: "1.5px solid #B36E71",
+  boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+}}
   >
     العدّ التنازلي
   </h2>
@@ -209,12 +209,12 @@ border: "1.5px solid #B36E71",
 <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
-    style={{
-      color: "#ffffff",
-      background: "rgba(255,255,255,0.15)",
-      border: "1px solid rgba(255,255,255,0.25)",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-    }}
+style={{
+  color: "#ffffff",
+  background: "rgba(255,255,255,0.15)",
+  border: "1.5px solid #B36E71",
+  boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+}}
   >
 موقع حفلنا
   </h2>
@@ -305,12 +305,12 @@ style={{ color:"#B36E71" }}
 <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
-    style={{
-      color: "#ffffff",
-      background: "rgba(255,255,255,0.15)",
-      border: "1px solid rgba(255,255,255,0.25)",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-    }}
+style={{
+  color: "#ffffff",
+  background: "rgba(255,255,255,0.15)",
+  border: "1.5px solid #B36E71",
+  boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+}}
   >
 برنامج الحفل
   </h2>
@@ -325,12 +325,12 @@ style={{ color:"#B36E71" }}
 <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
-    style={{
-      color: "#ffffff",
-      background: "rgba(255,255,255,0.15)",
-      border: "1px solid rgba(255,255,255,0.25)",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-    }}
+style={{
+  color: "#ffffff",
+  background: "rgba(255,255,255,0.15)",
+  border: "1.5px solid #B36E71",
+  boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+}}
   >
 تفاصيل الحفل
   </h2>
@@ -351,8 +351,9 @@ style={{ color:"#B36E71" }}
                       <div
                         className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center z-10"
                         style={{
-  background: "#B36E71",
-  boxShadow: "0 0 14px #B36E71",
+  background: "#ffffff",
+  border: "2px solid #B36E71",
+  boxShadow: "0 0 14px rgba(179,110,113,0.4)",
 }}
                       >
                         <span
@@ -398,7 +399,7 @@ style={{color:"#ffffff"}}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline underline-offset-4 transition-colors"
-style={{ color: "#B36E71" }}
+style={{ color: "#ffffff" }}
                   >
                     متجر غيمة
                   </a>
