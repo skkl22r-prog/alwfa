@@ -27,7 +27,7 @@ const SprayParticles = () => {
       tw: Math.random() * Math.PI * 2,
       ts: Math.random() * 0.05 + 0.025,
       isStar: Math.random() < 0.18,
-      hue: 38 + Math.random() * 14, // gold range 38-52
+hue: 300, // ثابت على #D8CED9 (بنفس فكرة اللون البنفسجي الفاتح)
       sat: 70 + Math.random() * 25,
     }));
 
@@ -60,9 +60,9 @@ const SprayParticles = () => {
         const alpha = p.o * twinkle;
         // gold glow halo
         const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5);
-        grad.addColorStop(0, `hsla(${p.hue}, ${p.sat}%, 75%, ${alpha * 0.85})`);
-        grad.addColorStop(0.4, `hsla(${p.hue}, ${p.sat}%, 60%, ${alpha * 0.25})`);
-        grad.addColorStop(1, `hsla(${p.hue}, 80%, 50%, 0)`);
+        grad.addColorStop(0, `hsla(300, 20%, 85%, ${alpha * 0.85})`);
+        grad.addColorStop(0.4, `hsla(300, 20%, 75%, ${alpha * 0.25})`);
+        grad.addColorStop(1, `hsla(300, 20%, 60%, 0);
         ctx.fillStyle = grad;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r * 5, 0, Math.PI * 2);
