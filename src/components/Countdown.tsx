@@ -1,56 +1,52 @@
 import { useEffect, useState } from "react";
 
-const Countdown = () => {
-  const targetDate = new Date("2026-07-27T00:00:00").getTime();
+const TARGET = new Date("2026-07-01T20:00:00+03:00").getTime();
 
-  const [time, setTime] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+const Countdown = () => {
+  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const diff = targetDate - now;
-
-      if (diff <= 0) return;
-
-      setTime({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
+    const tick = () => {
+      const diff = Math.max(0, TARGET - Date.now());
+      setT({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff / 3600000) % 24),
+        m: Math.floor((diff / 60000) % 60),
+        s: Math.floor((diff / 1000) % 60),
       });
-    }, 1000);
-
-    return () => clearInterval(interval);
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
   }, []);
 
+  const items = [
+    { v: t.d, l: "Days" },
+    { v: t.h, l: "Hours" },
+    { v: t.m, l: "Minutes" },
+    { v: t.s, l: "Seconds" },
+  ];
+
   return (
-    <div className="flex justify-center gap-4 text-white text-center font-display">
-
-      <div className="px-3">
-        <div className="text-3xl font-bold">{time.days}</div>
-        <div className="text-sm opacity-80">Days</div>
-      </div>
-
-      <div className="px-3">
-        <div className="text-3xl font-bold">{time.hours}</div>
-        <div className="text-sm opacity-80">Hours</div>
-      </div>
-
-      <div className="px-3">
-        <div className="text-3xl font-bold">{time.minutes}</div>
-        <div className="text-sm opacity-80">Min</div>
-      </div>
-
-      <div className="px-3">
-        <div className="text-3xl font-bold">{time.seconds}</div>
-        <div className="text-sm opacity-80">Sec</div>
-      </div>
-
+    <div dir="ltr" className="flex justify-center gap-3 sm:gap-6">
+      {items.map((it) => (
+        <div
+          key={it.l}
+          className="flex flex-col items-center justify-center rounded-xl px-4 sm:px-6 py-4 min-w-[70px] sm:min-w-[90px] backdrop-blur-md"
+          style={{
+            background: "hsla(60, 25%, 95%, 0.4)",
+            border: "1px solid hsl(80 25% 45% / 0.3)",
+            boxShadow: "var(--shadow-soft)",
+          }}
+        >
+          <div className="font-display text-3xl sm:text-4xl font-light text-primary tabular-nums">
+            {String(it.v).padStart(2, "0")}
+          </div>
+          <div className="text-xs uppercase tracking-widest mt-1 text-muted-foreground">
+            {it.l}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
