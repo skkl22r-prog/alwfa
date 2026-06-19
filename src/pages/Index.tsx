@@ -186,15 +186,19 @@ border: "1.5px solid #B36E71",
   <Reveal>
     <div className="flex justify-center mb-10">
       <h2
-        className="font-arabic text-3xl px-8 py-3 rounded-full"
-        style={{
-          color: "#B36E71",
-          background: "rgba(255,255,255,0.15)",
-          boxShadow: "0 0 12px rgba(179,110,113,0.25)",
-        }}
-      >
-        العد التنازلي
-      </h2>
+  className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
+  style={{
+    color: "#ffffff",
+    background: "rgba(255,255,255,0.12)",
+    textShadow: `
+      0 0 6px rgba(255,255,255,0.9),
+      0 0 12px rgba(255,255,255,0.6),
+      0 0 18px rgba(255,255,255,0.3)
+    `,
+  }}
+>
+  العد التنازلي
+</h2>
     </div>
   </Reveal>
 
