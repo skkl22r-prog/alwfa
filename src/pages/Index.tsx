@@ -145,7 +145,7 @@ const Index = () => {
                       style={
   d === 27
     ? {
-        color: "#C27A8B",
+        color: "#8A4E5C",
         fontWeight: "bold",
         fontSize: "0.95rem",
       }
