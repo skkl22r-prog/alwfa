@@ -184,12 +184,7 @@ border: "1.5px solid #B36E71",
           {/* Countdown */}
           <section className="px-4 py-16">
             <Reveal>
-              <div className="flex justify-center mb-10 items-center gap-2">
-
-  {/* الأيقونة الصحيحة */}
-  <MapPin style={{ color: "#B36E71" }} />
-
-  {/* العنوان فقط عليه حدود */}
+              <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
     style={{
@@ -199,9 +194,8 @@ border: "1.5px solid #B36E71",
       boxShadow: "0 0 12px rgba(179,110,113,0.25)",
     }}
   >
-    العد التنازلي
+    العدّ التنازلي
   </h2>
-
 </div>
             </Reveal>
             <Reveal delay={150}>
