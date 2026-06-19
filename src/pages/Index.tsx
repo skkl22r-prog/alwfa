@@ -105,19 +105,19 @@ const Index = () => {
               <div
                 className="mx-auto max-w-sm rounded-2xl p-6 text-center backdrop-blur-md"
                 style={{
-                  background: "hsla(40, 50%, 95%, 0.65)",
-                  border: "1.5px solid hsl(42 75% 55% / 0.5)",
-background: "rgba(255,255,255,0.8)"
-                }}
+  background: "rgba(255,255,255,0.8)",
+  border: "1.5px solid hsl(42 75% 55% / 0.5)",
+  boxShadow: "var(--shadow-soft)",
+}}
               >
                 <div
                   className="flex justify-between items-center font-display text-sm mb-3 px-2 py-2 rounded-lg"
                   dir="ltr"
                   style={{
-background: "linear-gradient(135deg,#DFA6B2,#C27A8B)"
-                    color: "hsl(30 40% 18%)",
-                    fontWeight: 600,
-                  }}
+  background: "linear-gradient(135deg,#DFA6B2,#C27A8B)",
+  color: "hsl(30 40% 18%)",
+  fontWeight: 600,
+}}
                 >
                   <span>Wednesday</span>
                   <span>July</span>
@@ -196,7 +196,7 @@ background: "linear-gradient(135deg,#DFA6B2,#C27A8B)"
               >
                 <iframe
                   title="موقع الحفل - قاعة شارلوت"
-                  src="https://maps.app.goo.gl/UFTMs2HUpoFtUiYJ8?g_st=ic"
+                  src="https://www.google.com/maps/place/%D9%85%D9%86%D8%B7%D9%82%D8%A9+%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9+47319%E2%80%AD/@28.463114,36.60849,16z/data=!4m6!3m5!1s0x15a84ccc9a551167:0x18aad07e6cccfec9!8m2!3d28.4646561!4d36.6111525!16s%2Fg%2F11h6q5251h?g_ep=Eg1tbF8yMDI2MDYxNF8wIOC7DCoASAJQAg%3D%3D"
                   width="100%"
                   height="320"
                   loading="lazy"
