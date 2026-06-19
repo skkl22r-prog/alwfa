@@ -130,7 +130,11 @@ const Index = () => {
                     <div key={i} className="py-1">{d}</div>
                   ))}
                 </div>
-                <div className="grid grid-cols-7 gap-1 text-xs font-display text-primary" dir="ltr">
+<div
+  className="grid grid-cols-7 gap-1 text-xs font-display"
+  dir="ltr"
+  style={{ color: "#B36E71" }}
+>
                   {/* July 2026 starts on Wednesday */}
                   {[null, null, null, 1, 2, 3, 4,
                     5, 6, 7, 8, 9, 10, 11,
