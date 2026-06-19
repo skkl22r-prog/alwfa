@@ -184,10 +184,10 @@ border: "1.5px solid #B36E71",
           {/* Countdown */}
           <section className="px-4 py-16">
             <Reveal>
-              <div className="flex items-center gap-2 justify-center">
-  
-  {/* الأيقونة بدون حدود */}
-  <Icon style={{ color: "#B36E71" }} />
+              <div className="flex justify-center mb-10 items-center gap-2">
+
+  {/* الأيقونة الصحيحة */}
+  <MapPin style={{ color: "#B36E71" }} />
 
   {/* العنوان فقط عليه حدود */}
   <h2
