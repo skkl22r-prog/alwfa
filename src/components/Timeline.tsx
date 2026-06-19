@@ -2,16 +2,16 @@ import Reveal from "./Reveal";
 
 const events = [
   {
-    title: "الاستقبال",
-    time: "9:00 م",
+    title: "9:00 م",
+    time: " الاستقبال",
   },
   {
-    title: "الزفة",
-    time: "11:00 م",
+    title: "11:00م",
+    time: "الزفة",
   },
   {
-    title: "العشاء",
-    time: "12:00 ص",
+    title: "12:00ص",
+    time: "العشاء",
   },
 ];
 
