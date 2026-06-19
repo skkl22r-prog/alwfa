@@ -352,7 +352,7 @@ style={{ color:"#B36E71" }}
                         className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center z-10"
                         style={{
                           background: "hsl(40 50% 95%)",
-                          border: "2px solid hsl(42 75% 50%)",
+style={{ background: "#B36E71" }}
                           boxShadow: "0 0 14px hsl(42 80% 60% / 0.4)",
                         }}
                       >
@@ -369,7 +369,10 @@ style={{ color:"#B36E71" }}
   boxShadow: "var(--shadow-soft)",
 }}
                       >
-                        <span className="font-arabic text-lg text-primary flex-1 text-right">
+<span
+  className="font-arabic text-lg flex-1 text-right"
+  style={{ color: "#B36E71" }}
+>
                           {d.text}
                         </span>
                         <d.icon className="w-7 h-7 shrink-0" style={{ color:"#B36E71" }} />
@@ -396,7 +399,7 @@ style={{color:"#ffffff"}}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline underline-offset-4 transition-colors"
-                    style={{ color: "hsl(42 75% 45%)" }}
+style={{ background: "#B36E71" }}
                   >
                     متجر غيمة
                   </a>
