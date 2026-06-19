@@ -34,7 +34,7 @@ const Countdown = () => {
           key={it.l}
           className="flex flex-col items-center justify-center rounded-xl px-4 sm:px-6 py-4 min-w-[70px] sm:min-w-[90px] backdrop-blur-md"
           style={{
-            background: "hsla(60, 25%, 95%, 0.4)",
+background: "#ffffff",
             border: "1px solid hsl(80 25% 45% / 0.3)",
             boxShadow: "var(--shadow-soft)",
           }}
