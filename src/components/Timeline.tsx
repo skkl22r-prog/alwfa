@@ -1,79 +1,74 @@
-import Reveal from "./Reveal";
+import { useEffect, useRef, useState } from "react";
+import Reveal from "@/components/Reveal";
 
-const events = [
-  {
-    title: "الاستقبال",
-    time: "9:00م",
-  },
-  {
-    title: "الزفة",
-    time: "11:00م",
-  },
-  {
-    title: "العشاظ",
-    time: "12:00ص",
-  },
-];
+const Timeline = ({ events = [] }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
 
-const Timeline = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      const total = rect.height;
+      const scrolled = Math.min(
+        Math.max(windowHeight - rect.top, 0),
+        total
+      );
+
+      setProgress(scrolled / total);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-  <div className="relative max-w-2xl mx-auto py-8">
+    <div ref={containerRef} className="relative max-w-2xl mx-auto py-8">
 
-    {/* الخط الأبيض في المنتصف */}
-    <div
-      className="absolute top-0 bottom-0 right-1/2 translate-x-1/2 w-px"
-      style={{
-        background: "#ffffff",
-        opacity: 0.5,
-      }}
-    />
-
-    {/* الدائرة المتحركة (شكل بسيط يرجع الحياة للتصميم) */}
-    <div
-      className="absolute top-0 bottom-0 right-1/2 translate-x-1/2 flex items-start justify-center"
-    >
+      {/* الخط */}
       <div
-        className="w-3 h-3 rounded-full animate-pulse"
+        className="absolute top-0 bottom-0 right-1/2 translate-x-1/2 w-px"
+        style={{ background: "#ffffff", opacity: 0.4 }}
+      />
+
+      {/* الدائرة المتحركة */}
+      <div
+        className="absolute right-1/2 w-3 h-3 rounded-full"
         style={{
+          top: `${progress * 100}%`,
+          transform: "translate(-50%, -50%)",
           background: "#B36E71",
           boxShadow: "0 0 12px rgba(179,110,113,0.6)",
         }}
       />
+
+      {/* المحتوى */}
+      <div className="space-y-10">
+        {events.map((e, i) => (
+          <Reveal key={i} delay={i * 120}>
+            <div className="flex items-center justify-between px-6 py-4">
+
+              <div className="w-1/3 text-left text-white">
+                {e.time}
+              </div>
+
+              <div className="w-1/3" />
+
+              <div className="w-1/3 text-right text-white">
+                {e.label}
+              </div>
+
+            </div>
+          </Reveal>
+        ))}
+      </div>
     </div>
-
-    {/* المحتوى */}
-    <div className="space-y-10">
-      {events.map((e, i) => (
-        <Reveal key={i} delay={i * 150}>
-          <div className="flex items-center justify-center gap-8">
-
-            {/* الوقت */}
-            <div className="font-display text-2xl" style={{ color: "#ffffff" }}>
-              {e.time}
-            </div>
-
-            {/* الدائرة داخل العناصر */}
-            <div
-              className="w-4 h-4 rounded-full flex items-center justify-center"
-              style={{
-                background: "#ffffff",
-                border: "2px solid #B36E71",
-              }}
-            >
-              <div className="w-2 h-2 rounded-full" style={{ background: "#B36E71" }} />
-            </div>
-
-            {/* النص */}
-            <div className="font-arabic text-2xl" style={{ color: "#ffffff" }}>
-              {e.label}
-            </div>
-
-          </div>
-        </Reveal>
-      ))}
-    </div>
-  </div>
-);
+  );
 };
 
 export default Timeline;
