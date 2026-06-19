@@ -26,15 +26,27 @@ const Timeline = () => {
                 {e.time}
               </div>
               <div
-                className="w-3 h-3 rounded-full"
-                style={{
-                  background: "hsl(42 75% 50%)",
-                  boxShadow: "0 0 0 6px hsl(42 75% 50% / 0.2)",
-                }}
-              />
-              <div className="font-arabic text-2xl text-primary">
-                {e.label}
-              </div>
+  className="w-4 h-4 rounded-full flex items-center justify-center"
+  style={{
+    background: "#ffffff",
+    border: "2px solid #B36E71",
+    boxShadow: "0 0 10px rgba(179,110,113,0.35)",
+  }}
+>
+  <div
+    className="w-2 h-2 rounded-full"
+    style={{
+      background: "#B36E71",
+    }}
+  />
+</div>
+              <div className="font-display text-2xl" style={{ color: "#ffffff" }}>
+  {e.time}
+</div>
+
+<div className="font-arabic text-2xl" style={{ color: "#ffffff" }}>
+  {e.label}
+</div>
             </div>
           </Reveal>
         ))}
