@@ -1,6 +1,6 @@
 import { useState } from "react";
 import invitationImg from "@/assets/sarah33.jpg";
-import waxSeal from "@/assets/sarah22.jpg";
+import waxSeal from "@/assets/خط رواسي.png";
 
 interface EnvelopeProps {
   onOpen: () => void;
