@@ -1,57 +1,75 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const TARGET = new Date("2026-07-27T20:00:00+03:00").getTime();
-
-const Countdown = () => {
-  const [t, setT] = useState({ d: 0, h: 0, m: 0, s: 0 });
+const Timeline = ({ events }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const tick = () => {
-      const diff = Math.max(0, TARGET - Date.now());
-      setT({
-        d: Math.floor(diff / 86400000),
-        h: Math.floor((diff / 3600000) % 24),
-        m: Math.floor((diff / 60000) % 60),
-        s: Math.floor((diff / 1000) % 60),
-      });
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // حساب نسبة التمرير داخل التايملاين
+      const total = rect.height;
+      const scrolled = Math.min(
+        Math.max(windowHeight - rect.top, 0),
+        total
+      );
+
+      setProgress(scrolled / total);
     };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const items = [
-    { v: t.d, l: "Days" },
-    { v: t.h, l: "Hours" },
-    { v: t.m, l: "Minutes" },
-    { v: t.s, l: "Seconds" },
-  ];
-
   return (
-    <div dir="ltr" className="flex justify-center gap-3 sm:gap-6">
-      {items.map((it) => (
-        <div
-          key={it.l}
-          className="flex flex-col items-center justify-center rounded-xl px-4 sm:px-6 py-4 min-w-[70px] sm:min-w-[90px] backdrop-blur-md"
-          style={{
-background: "#ffffff",
-            border: "1px solid hsl(80 25% 45% / 0.3)",
-            boxShadow: "var(--shadow-soft)",
-          }}
-        >
-<div
-  className="font-display text-3xl sm:text-4xl font-light tabular-nums"
-  style={{ color: "#B36E71" }}
->
-            {String(it.v).padStart(2, "0")}
+    <div ref={containerRef} className="relative max-w-2xl mx-auto py-8">
+
+      {/* الخط */}
+      <div
+        className="absolute top-0 bottom-0 right-1/2 translate-x-1/2 w-px"
+        style={{
+          background: "#ffffff",
+          opacity: 0.4,
+        }}
+      />
+
+      {/* الدائرة المتحركة */}
+      <div
+        className="absolute right-1/2 translate-x-1/2 w-3 h-3 rounded-full"
+        style={{
+          background: "#B36E71",
+          boxShadow: "0 0 12px rgba(179,110,113,0.7)",
+          top: `${progress * 100}%`,
+          transform: "translate(-50%, -50%)",
+        }}
+      />
+
+      {/* العناصر */}
+      <div className="space-y-10">
+        {events.map((e, i) => (
+          <div key={i} className="flex items-center justify-between px-6 py-6">
+
+            <div className="w-1/3 text-left text-white font-display">
+              {e.time}
+            </div>
+
+            <div className="w-1/3" />
+
+            <div className="w-1/3 text-right text-white font-arabic">
+              {e.label}
+            </div>
+
           </div>
-          <div className="text-xs uppercase tracking-widest mt-1 text-[#B36E71]">
-            {it.l}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Countdown;
+export default Timeline;
