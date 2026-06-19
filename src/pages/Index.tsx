@@ -222,9 +222,31 @@ border: "1.5px solid #B36E71",
             </Reveal>
             <Reveal delay={100}>
               <div className="text-center mb-6">
-                <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
-                <div className="font-arabic text-2xl text-primary">قاعة شارلوت</div>
-                <div className="font-arabic text-lg text-muted-foreground mt-1">تبوك</div>
+<MapPin
+className="mx-auto w-10 h-10 mb-3"
+style={{
+color:"#ffffff",
+filter:"drop-shadow(0 0 10px rgba(255,255,255,0.9))"
+}}
+/>
+<div
+className="font-arabic text-2xl"
+style={{
+color:"#ffffff",
+textShadow:"0 0 12px rgba(255,255,255,0.8)"
+}}
+>
+قاعة شارلوت
+</div>
+<div
+className="font-arabic text-lg mt-1"
+style={{
+color:"#ffffff",
+textShadow:"0 0 10px rgba(255,255,255,0.7)"
+}}
+>
+تبوك
+</div>
               
               </div>
             </Reveal>
@@ -233,7 +255,7 @@ border: "1.5px solid #B36E71",
                 className="max-w-2xl mx-auto rounded-2xl overflow-hidden"
                 style={{
                   boxShadow: "var(--shadow-soft)",
-                  border: "1.5px solid hsl(42 75% 55% / 0.5)",
+border:"1.5px solid #B36E71",
                 }}
               >
                 <iframe
@@ -253,13 +275,18 @@ border: "1.5px solid #B36E71",
                   aria-label="افتح الموقع في خرائط Google"
                   className="inline-flex items-center gap-2 px-4 h-10 rounded-full transition-transform hover:scale-105"
                   style={{
-                    background: "hsl(40 50% 95%)",
-                    border: "1.5px solid hsl(42 75% 50%)",
+background:"#ffffff",
+border:"1.5px solid #B36E71",
                     boxShadow: "0 0 14px hsl(42 80% 60% / 0.35)",
                   }}
                 >
-                  <Navigation className="w-5 h-5" style={{ color: "hsl(42 75% 45%)" }} />
-                  <span className="font-arabic text-sm" style={{ color: "hsl(42 75% 35%)", fontWeight: 600 }}>
+<Navigation
+style={{ color:"#B36E71" }}
+/>
+                  <span className="font-arabic text-sm" style={{
+color:"#B36E71",
+fontWeight:600
+}}
                     اضغط هنا
                   </span>
                 </a>
@@ -334,15 +361,15 @@ border: "1.5px solid #B36E71",
                       <div
                         className="rounded-xl px-6 py-5 backdrop-blur-md flex items-center justify-between gap-4"
                         style={{
-                          background: "hsla(40, 50%, 95%, 0.55)",
-                          border: "1.5px solid hsl(42 75% 55% / 0.4)",
+background:"#ffffff"
+border:"1.5px solid #B36E71"
                           boxShadow: "var(--shadow-soft)",
                         }}
                       >
                         <span className="font-arabic text-lg text-primary flex-1 text-right">
                           {d.text}
                         </span>
-                        <d.icon className="w-7 h-7 shrink-0" style={{ color: "hsl(42 75% 45%)" }} />
+                        <d.icon className="w-7 h-7 shrink-0" style={{ color:"#B36E71" }} />
                       </div>
                     </div>
                   </Reveal>
@@ -354,7 +381,10 @@ border: "1.5px solid #B36E71",
           {/* Footer */}
           <footer className="px-4 py-12 text-center">
             <Reveal>
-              <div className="flex items-center justify-center gap-2 text-primary">
+<div
+className="flex items-center justify-center gap-2"
+style={{color:"#ffffff"}}
+>
                 <Heart className="w-4 h-4 fill-current" />
                 <span className="font-arabic text-sm">
                   صُنع بحب بواسطة{" "}
