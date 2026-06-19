@@ -140,13 +140,17 @@ const Index = () => {
                     <div
                       key={i}
                       className={`aspect-square flex items-center justify-center rounded ${
-                        d === 1 ? "heart-strike relative font-bold" : ""
+                        d === 27 ? "heart-strike relative font-bold" : ""
                       }`}
                       style={
-                        d === 1
-                          ? { color: "hsl(0 0% 0%)", fontSize: "0.95rem" }
-                          : {}
-                      }
+  d === 27
+    ? {
+        color: "#C27A8B",
+        fontWeight: "bold",
+        fontSize: "0.95rem",
+      }
+    : {}
+}
                     >
                       {d ?? ""}
                     </div>
