@@ -182,7 +182,7 @@ const Index = () => {
               <div className="text-center mb-6">
                 <MapPin className="mx-auto w-10 h-10 mb-3" style={{ color: "hsl(42 75% 50%)" }} />
                 <div className="font-arabic text-2xl text-primary">قاعة شارلوت</div>
-                <div className="font-arabic text-lg text-muted-foreground mt-1">الرياض</div>
+                <div className="font-arabic text-lg text-muted-foreground mt-1">تبوك</div>
                 <a
                   href="https://maps.app.goo.gl/UFTMs2HpoFtUiYJ8?g_st=ic"
                   target="_blank"
