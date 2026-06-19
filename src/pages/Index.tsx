@@ -351,14 +351,13 @@ style={{ color:"#B36E71" }}
                       <div
                         className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center z-10"
                         style={{
-                          background: "hsl(40 50% 95%)",
-style={{ background: "#B36E71" }}
-                          boxShadow: "0 0 14px hsl(42 80% 60% / 0.4)",
-                        }}
+  background: "#B36E71",
+  boxShadow: "0 0 14px #B36E71",
+}}
                       >
                         <span
                           className="w-2 h-2 rounded-full"
-                          style={{ background: "hsl(42 75% 50%)" }}
+style={{ background: "#B36E71" }}
                         />
                       </div>
                       <div
@@ -399,7 +398,7 @@ style={{color:"#ffffff"}}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline underline-offset-4 transition-colors"
-style={{ background: "#B36E71" }}
+style={{ color: "#B36E71" }}
                   >
                     متجر غيمة
                   </a>
