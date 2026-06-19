@@ -186,12 +186,11 @@ border: "1.5px solid #B36E71",
             <Reveal>
              <div className="flex justify-center mb-10">
   <h2
-  className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
+  className="font-arabic text-3xl px-8 py-3 rounded-full"
   style={{
     color: "#B36E71",
     background: "rgba(255,255,255,0.15)",
     boxShadow: "0 0 12px rgba(179,110,113,0.25)",
-    border: "none",
   }}
 >
   العد التنازلي
