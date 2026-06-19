@@ -109,7 +109,7 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
           <div
             className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px pointer-events-none"
             style={{
-              background: "hsla(45, 80%, 70%, 0.55)",
+background: "#D8CED9",
               opacity: opening ? 0 : 1,
             }}
           />
@@ -132,10 +132,12 @@ const Envelope = ({ onOpen }: EnvelopeProps) => {
         </div>
 
         {/* text */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-sm font-arabic animate-pulse z-10">
-          اضغط لفتح الدعوة
-        </div>
-
+        <div
+  className="text-sm font-arabic animate-pulse z-10"
+  style={{ color: "#ffffff" }}
+>
+  اضغط لفتح الدعوة
+</div>
       </div>
     </div>
   );
