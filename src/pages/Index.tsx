@@ -283,12 +283,15 @@ border:"1.5px solid #B36E71",
 <Navigation
 style={{ color:"#B36E71" }}
 />
-                  <span className="font-arabic text-sm" style={{
-color:"#B36E71",
-fontWeight:600
-}}
-                    اضغط هنا
-                  </span>
+                  <span
+  className="font-arabic text-sm"
+  style={{
+    color: "#B36E71",
+    fontWeight: 600,
+  }}
+>
+  اضغط هنا
+</span>
                 </a>
               </div>
             </Reveal>
@@ -361,10 +364,10 @@ fontWeight:600
                       <div
                         className="rounded-xl px-6 py-5 backdrop-blur-md flex items-center justify-between gap-4"
                         style={{
-background:"#ffffff"
-border:"1.5px solid #B36E71"
-                          boxShadow: "var(--shadow-soft)",
-                        }}
+  background: "#ffffff",
+  border: "1.5px solid #B36E71",
+  boxShadow: "var(--shadow-soft)",
+}}
                       >
                         <span className="font-arabic text-lg text-primary flex-1 text-right">
                           {d.text}
