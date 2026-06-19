@@ -145,7 +145,7 @@ border: "1.5px solid #B36E71",
                       style={
   d === 27
     ? {
-        color: "#B36E71",
+        color: "#D8CED9",
         fontWeight: "700",
         fontSize: "0.95rem",
         position: "relative",
@@ -184,12 +184,19 @@ border: "1.5px solid #B36E71",
           {/* Countdown */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2
-  className="text-center font-arabic text-3xl mb-10"
-  style={{ color: "#ffffff" }}
->
-  العدّ التنازلي
-</h2>
+              <div className="flex justify-center mb-10">
+  <h2
+    className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
+    style={{
+      color: "#ffffff",
+      background: "rgba(255,255,255,0.15)",
+      border: "1px solid rgba(255,255,255,0.25)",
+      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+    }}
+  >
+    العدّ التنازلي
+  </h2>
+</div>
             </Reveal>
             <Reveal delay={150}>
               <Countdown />
@@ -199,7 +206,19 @@ border: "1.5px solid #B36E71",
           {/* Venue */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-8 "style={{ color: "#ffffff" }}>موقع حفلنا</h2>
+<div className="flex justify-center mb-10">
+  <h2
+    className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
+    style={{
+      color: "#ffffff",
+      background: "rgba(255,255,255,0.15)",
+      border: "1px solid rgba(255,255,255,0.25)",
+      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+    }}
+  >
+موقع حفلنا
+  </h2>
+</div>
             </Reveal>
             <Reveal delay={100}>
               <div className="text-center mb-6">
@@ -253,7 +272,19 @@ border: "1.5px solid #B36E71",
           {/* Program timeline */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-6" style={{ color: "#ffffff" }}>برنامج الحفل</h2>
+<div className="flex justify-center mb-10">
+  <h2
+    className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
+    style={{
+      color: "#ffffff",
+      background: "rgba(255,255,255,0.15)",
+      border: "1px solid rgba(255,255,255,0.25)",
+      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+    }}
+  >
+برنامج الحفل
+  </h2>
+</div>
             </Reveal>
             <Timeline />
           </section>
@@ -261,7 +292,19 @@ border: "1.5px solid #B36E71",
           {/* Details */}
           <section className="px-4 py-16">
             <Reveal>
-              <h2 className="text-center font-arabic text-3xl text-primary mb-10" style={{ color: "#ffffff" }}>تفاصيل الحفل</h2>
+<div className="flex justify-center mb-10">
+  <h2
+    className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
+    style={{
+      color: "#ffffff",
+      background: "rgba(255,255,255,0.15)",
+      border: "1px solid rgba(255,255,255,0.25)",
+      boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+    }}
+  >
+تفاصيل الحفل
+  </h2>
+</div>
             </Reveal>
             <div className="relative max-w-xl mx-auto">
               <div
