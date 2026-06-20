@@ -145,11 +145,11 @@ border: "1.5px solid #B36E71",
                       style={
   d === 27
     ? {
-        color: "#D8CED9",
+        color: "#7A3E45",
         fontWeight: "700",
         fontSize: "0.95rem",
         position: "relative",
-        zIndex: 2,
+        zIndex: 3,
       }
     : {}
 }
