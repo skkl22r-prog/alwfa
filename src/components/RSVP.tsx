@@ -7,7 +7,7 @@ const Rsvp = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    await fetch("حطي رابط Apps Script هنا", {
+    await fetch("https://docs.google.com/forms/d/e/1FAIpQLSeCCc76FLMiqg_BMz4jLmcJ8RWBs0pYdOlhx0Rba1ZIbKxctQ/viewform?usp=header", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
