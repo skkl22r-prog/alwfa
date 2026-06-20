@@ -239,15 +239,6 @@ style={{
   }}
 >
 
-  <div
-    className="w-12 h-12 rounded-full flex items-center justify-center"
-    style={{
-      border: "1.5px solid #B36E71",
-      background: "rgba(255,255,255,0.12)",
-    }}
-  >
-    
-  </div>
 
   <div
     className="font-arabic text-2xl"
