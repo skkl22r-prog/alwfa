@@ -20,11 +20,24 @@ const Timeline = () => {
       <div className="space-y-10">
         {events.map((e, i) => (
           <Reveal key={i} delay={i * 120}>
-            <div className="flex items-center justify-between px-6">
+<div
+  className="flex items-center justify-between px-8 py-5 rounded-2xl"
+  style={{
+    background: "rgba(255,255,255,0.10)",
+    backdropFilter: "blur(10px)",
+  }}
+>
 
-              <div className="w-1/3 text-left text-white">
-                {e.time}
-              </div>
+              <div
+  className="w-1/3 text-left"
+  style={{
+    color: "#ffffff",
+    fontSize: "30px",
+    textShadow: "0 0 10px rgba(255,255,255,0.45)",
+  }}
+>
+  {e.time}
+</div>
 
               {/* الدائرة */}
               <div className="w-1/3 flex justify-center">
@@ -37,9 +50,16 @@ const Timeline = () => {
                 />
               </div>
 
-              <div className="w-1/3 text-right text-white">
-                {e.label}
-              </div>
+              <div
+  className="w-1/3 text-right"
+  style={{
+    color: "#ffffff",
+    fontSize: "30px",
+    textShadow: "0 0 10px rgba(255,255,255,0.45)",
+  }}
+>
+  {e.label}
+</div>
 
             </div>
           </Reveal>
