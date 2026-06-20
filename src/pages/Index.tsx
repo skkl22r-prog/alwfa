@@ -223,31 +223,40 @@ style={{
             </Reveal>
             <Reveal delay={100}>
               <div className="text-center mb-6">
-<MapPin
-className="mx-auto w-10 h-10 mb-3"
-style={{
-color:"#ffffff",
-filter:"drop-shadow(0 0 10px rgba(255,255,255,0.9))"
-}}
-/>
 <div
-className="font-arabic text-2xl"
-style={{
-color:"#ffffff",
-textShadow:"0 0 12px rgba(255,255,255,0.8)"
-}}
+  className="mx-auto flex items-center justify-center gap-4 px-7 py-4 rounded-2xl"
+  style={{
+    background: "rgba(255,255,255,0.10)",
+    backdropFilter: "blur(10px)",
+    width: "fit-content",
+  }}
 >
-قاعة شارلوت
-</div>
 
-<div
-className="font-arabic text-lg mt-1"
-style={{
-color:"#ffffff",
-textShadow:"0 0 10px rgba(255,255,255,0.7)"
-}}
->
-تبوك
+  <div
+    className="w-12 h-12 rounded-full flex items-center justify-center"
+    style={{
+      border: "1.5px solid #B36E71",
+      background: "rgba(255,255,255,0.12)",
+    }}
+  >
+    <MapPin
+      className="w-6 h-6"
+      style={{
+        color: "#B36E71",
+      }}
+    />
+  </div>
+
+  <div
+    className="font-arabic text-2xl"
+    style={{
+      color: "#ffffff",
+      textShadow: "0 0 10px rgba(255,255,255,0.5)",
+    }}
+  >
+    قاعة شارلوت - تبوك
+  </div>
+
 </div>
               
               </div>
