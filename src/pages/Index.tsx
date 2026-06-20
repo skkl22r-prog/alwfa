@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import Timeline from "@/components/Timeline";
 import MusicToggle from "@/components/MusicToggle";
-
+import Rsvp from "@/components/Rsvp";
 const Index = () => {
   const [opened, setOpened] = useState(false);
   const [atTop, setAtTop] = useState(true);
