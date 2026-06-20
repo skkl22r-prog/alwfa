@@ -223,6 +223,13 @@ style={{
             </Reveal>
             <Reveal delay={100}>
               <div className="text-center mb-6">
+<MapPin
+  className="mx-auto w-10 h-10 mb-4"
+  style={{
+    color: "#ffffff",
+    filter: "drop-shadow(0 0 10px rgba(255,255,255,0.9))",
+  }}
+/>
 <div
   className="mx-auto flex items-center justify-center gap-4 px-7 py-4 rounded-2xl"
   style={{
@@ -239,12 +246,7 @@ style={{
       background: "rgba(255,255,255,0.12)",
     }}
   >
-    <MapPin
-      className="w-6 h-6"
-      style={{
-        color: "#B36E71",
-      }}
-    />
+    
   </div>
 
   <div
