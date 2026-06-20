@@ -239,6 +239,7 @@ textShadow:"0 0 12px rgba(255,255,255,0.8)"
 >
 قاعة شارلوت
 </div>
+
 <div
 className="font-arabic text-lg mt-1"
 style={{
