@@ -206,7 +206,14 @@ style={{
 
           {/* Venue */}
           <section className="px-4 py-16">
-            <Reveal>
+            <MapPin
+  className="mx-auto w-10 h-10 mb-4"
+  style={{
+    color: "#ffffff",
+    filter: "drop-shadow(0 0 10px rgba(255,255,255,0.9))",
+  }}
+/>
+<Reveal>
 <div className="flex justify-center mb-10">
   <h2
     className="font-arabic text-3xl px-8 py-3 rounded-full backdrop-blur-md"
@@ -223,13 +230,7 @@ style={{
             </Reveal>
             <Reveal delay={100}>
               <div className="text-center mb-6">
-<MapPin
-  className="mx-auto w-10 h-10 mb-4"
-  style={{
-    color: "#ffffff",
-    filter: "drop-shadow(0 0 10px rgba(255,255,255,0.9))",
-  }}
-/>
+
 <div
   className="mx-auto flex items-center justify-center gap-4 px-7 py-4 rounded-2xl"
   style={{
