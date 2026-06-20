@@ -133,8 +133,13 @@ background: "#D8CED9",
 
         {/* text */}
         <div
-  className="text-sm font-arabic animate-pulse z-10"
-  style={{ color: "#ffffff" }}
+  className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+  style={{
+    color: "#ffffff",
+    fontSize: "16px",
+    fontWeight: 600,
+    textShadow: "0 0 10px rgba(255,255,255,0.7)",
+  }}
 >
   اضغط لفتح الدعوة
 </div>
