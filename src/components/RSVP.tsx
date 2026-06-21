@@ -1,10 +1,9 @@
 import { useState } from "react";
 
-// Google Form action (NEW LINK)
+// Google Form action
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSeCCc76FLMiqg_BMz4jLmcJ8RWBs0pYdOlhx0Rba1ZIbKxctQ/formResponse";
 
-// Entry IDs (from your prefilled link)
 const FIELD_NAME = "entry.2121080640";
 const FIELD_ATTEND = "entry.1078161612";
 const FIELD_MESSAGE = "entry.2105314445";
@@ -13,7 +12,6 @@ const Rsvp = () => {
   const [name, setName] = useState("");
   const [attendance, setAttendance] = useState<"yes" | "no" | "">("");
   const [message, setMessage] = useState("");
-
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -39,7 +37,7 @@ const Rsvp = () => {
       setName("");
       setAttendance("");
       setMessage("");
-    } catch (err) {
+    } catch {
       alert("صار خطأ بالإرسال");
     } finally {
       setLoading(false);
@@ -47,18 +45,17 @@ const Rsvp = () => {
   };
 
   return (
-<div className="max-w-md mx-auto p-6 text-white">
+    <div className="max-w-md mx-auto p-6">
 
-
-<form
-  onSubmit={handleSubmit}
-  className="space-y-4 rounded-2xl p-5"
-  style={{
-    background: "#ffffff",
-    border: "1.5px solid #B36E71",
-    boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-  }}
->
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-4 rounded-2xl p-5"
+        style={{
+          background: "#ffffff",
+          border: "1.5px solid #B36E71",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.10)",
+        }}
+      >
 
         {/* الاسم */}
         <input
@@ -66,76 +63,73 @@ const Rsvp = () => {
           placeholder="اكتب اسمك الكريم"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-xl border px-4 py-3 text-sm text-white placeholder-white/70"
-style={{
-  background: "rgba(255,255,255,0.10)",
-  border: "1px solid #B36E71",
-}}
+          className="w-full rounded-xl px-4 py-3 text-sm"
+          style={{
+            background: "#f5f5f5",
+            border: "1px solid #B36E71",
+            color: "#B36E71",
+          }}
         />
 
-        {/* خيارات الحضور */}
+        {/* أزرار الحضور */}
         <div className="grid grid-cols-2 gap-2">
 
-  {/* تأكيد الحضور */}
-  <button
-    type="button"
-    onClick={() => setAttendance("yes")}
-    className="rounded-xl px-3 py-3 text-sm border transition"
-    style={{
-      background:
-        attendance === "yes"
-          ? "#B36E71"
-          : "rgba(255,255,255,0.10)",
-      border: "1px solid #B36E71",
-      color: attendance === "yes" ? "#fff" : "#fff",
-    }}
-  >
-    تأكيد الحضور
-  </button>
+          <button
+            type="button"
+            onClick={() => setAttendance("yes")}
+            className="rounded-xl px-3 py-3 text-sm border"
+            style={{
+              background:
+                attendance === "yes" ? "#B36E71" : "#f5f5f5",
+              border: "1px solid #B36E71",
+              color: attendance === "yes" ? "#fff" : "#B36E71",
+            }}
+          >
+            تأكيد الحضور
+          </button>
 
-  {/* الاعتذار */}
-  <button
-    type="button"
-    onClick={() => setAttendance("no")}
-    className="rounded-xl px-3 py-3 text-sm border transition"
-    style={{
-      background:
-        attendance === "no"
-          ? "#B36E71"
-          : "rgba(255,255,255,0.10)",
-      border: "1px solid #B36E71",
-      color: attendance === "no" ? "#fff" : "#fff",
-    }}
-  >
-    الاعتذار عن الحضور
-  </button>
+          <button
+            type="button"
+            onClick={() => setAttendance("no")}
+            className="rounded-xl px-3 py-3 text-sm border"
+            style={{
+              background:
+                attendance === "no" ? "#B36E71" : "#f5f5f5",
+              border: "1px solid #B36E71",
+              color: attendance === "no" ? "#fff" : "#B36E71",
+            }}
+          >
+            الاعتذار عن الحضور
+          </button>
 
-</div>
+        </div>
 
         {/* الرسالة */}
         <textarea
           placeholder="رسالة إلى العروسين (اختياري)"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-className="w-full rounded-xl border px-4 py-3 text-sm text-white placeholder-white/70 resize-none"
-style={{
-  background: "rgba(255,255,255,0.10)",
-  border: "1px solid #B36E71",
-}}
-
+          className="w-full rounded-xl px-4 py-3 text-sm resize-none"
+          rows={3}
+          style={{
+            background: "#f5f5f5",
+            border: "1px solid #B36E71",
+            color: "#B36E71",
+          }}
         />
 
         {/* زر الإرسال */}
         <button
-  type="submit"
-  disabled={loading}
-  className="w-full rounded-full text-white px-5 py-3 text-sm font-medium shadow transition disabled:opacity-60"
-  style={{
-    background: "#B36E71",
-  }}
->
-  {loading ? "جاري الإرسال..." : "تأكيد الإرسال"}
-</button>
+          type="submit"
+          disabled={loading}
+          className="w-full rounded-full px-5 py-3 text-sm font-medium"
+          style={{
+            background: "#B36E71",
+            color: "#fff",
+          }}
+        >
+          {loading ? "جاري الإرسال..." : "تأكيد الإرسال"}
+        </button>
 
       </form>
     </div>
