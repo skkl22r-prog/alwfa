@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import musicSrc from "@/assets/music.m4a";
+import musicSrc from "/دعوة دفاف الوفاء.mp3";
 
 interface Props {
   active: boolean;
@@ -46,10 +46,10 @@ const MusicToggle = ({ active }: Props) => {
 }}
       >
         {playing ? (
-          <Volume2 className="w-5 h-5" style={{ color: "hsl(38 65% 38%)" }} />
-        ) : (
-          <VolumeX className="w-5 h-5" style={{ color: "#B36E71" }} />
-        )}
+  <Volume2 className="w-5 h-5" style={{ color: "#B36E71" }} />
+) : (
+  <VolumeX className="w-5 h-5" style={{ color: "#B36E71" }} />
+)}
       </button>
     </>
   );
