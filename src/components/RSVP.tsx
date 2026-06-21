@@ -123,7 +123,7 @@ const Rsvp = () => {
   </label>
 
   <textarea
-    placeholder="...اكتب رسالتك"
+    placeholder="اكتب رسالتك..."
     value={message}
     onChange={(e) => setMessage(e.target.value)}
     className="w-full rounded-xl px-4 py-3 text-sm resize-none"
