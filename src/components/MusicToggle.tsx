@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import musicSrc from "/دعوة دفاف الوفاء.mp3";
+import musicSrc from "/دعوة دفاف الوفاء.mp4";
 
 interface Props {
   active: boolean;
