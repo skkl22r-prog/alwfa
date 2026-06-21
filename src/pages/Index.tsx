@@ -90,7 +90,7 @@ const Index = () => {
             <img
               src={invitationImg}
               alt="دعوة زفاف الوفاء"
-              className="w-screen h-auto max-w-none animate-fade-in"
+className="w-full max-w-2xl mx-auto animate-fade-in"
               style={{ boxShadow: "var(--shadow-elegant)" }}
             />
           </section>
