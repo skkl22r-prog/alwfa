@@ -127,14 +127,15 @@ style={{
 
         {/* زر الإرسال */}
         <button
-          type="submit"
-          disabled={loading}
-className="w-full rounded-full text-white px-5 py-3 text-sm font-medium shadow transition"
-style={{
-  background: "#B36E71",
-}}
-          {loading ? "جاري الإرسال..." : "تأكيد الإرسال"}
-        </button>
+  type="submit"
+  disabled={loading}
+  className="w-full rounded-full text-white px-5 py-3 text-sm font-medium shadow transition disabled:opacity-60"
+  style={{
+    background: "#B36E71",
+  }}
+>
+  {loading ? "جاري الإرسال..." : "تأكيد الإرسال"}
+</button>
 
       </form>
     </div>
