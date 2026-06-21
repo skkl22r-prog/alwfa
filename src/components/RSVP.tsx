@@ -52,9 +52,9 @@ const Rsvp = () => {
 
 <form
   onSubmit={handleSubmit}
-  className="space-y-4 rounded-2xl p-5 backdrop-blur-md"
+  className="space-y-4 rounded-2xl p-5"
   style={{
-    background: "rgba(255,255,255,0.15)",
+    background: "#ffffff",
     border: "1.5px solid #B36E71",
     boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
   }}
@@ -75,37 +75,42 @@ style={{
 
         {/* خيارات الحضور */}
         <div className="grid grid-cols-2 gap-2">
-          <button
-            type="button"
-            onClick={() => setAttendance("yes")}
-            className={`p-3 rounded-lg border ${
-              attendance === "yes"
-                ? "bg-pink-500 text-white border-pink-500"
-                : "border-pink-300"
-            }`}
-          >
-            تأكيد الحضور
-          </button>
 
-          <button
-            type="button"
-            onClick={() => setAttendance("no")}
-            className={`rounded-xl px-3 py-3 text-sm border transition ${
-  attendance === "yes"
-    ? "text-white"
-    : "text-white/80"
-}`}
-style={{
-  background:
-    attendance === "yes"
-      ? "#B36E71"
-      : "rgba(255,255,255,0.10)",
-  border: "1px solid #B36E71",
-}}
-          >
-            الاعتذار عن الحضور
-          </button>
-        </div>
+  {/* تأكيد الحضور */}
+  <button
+    type="button"
+    onClick={() => setAttendance("yes")}
+    className="rounded-xl px-3 py-3 text-sm border transition"
+    style={{
+      background:
+        attendance === "yes"
+          ? "#B36E71"
+          : "rgba(255,255,255,0.10)",
+      border: "1px solid #B36E71",
+      color: attendance === "yes" ? "#fff" : "#fff",
+    }}
+  >
+    تأكيد الحضور
+  </button>
+
+  {/* الاعتذار */}
+  <button
+    type="button"
+    onClick={() => setAttendance("no")}
+    className="rounded-xl px-3 py-3 text-sm border transition"
+    style={{
+      background:
+        attendance === "no"
+          ? "#B36E71"
+          : "rgba(255,255,255,0.10)",
+      border: "1px solid #B36E71",
+      color: attendance === "no" ? "#fff" : "#fff",
+    }}
+  >
+    الاعتذار عن الحضور
+  </button>
+
+</div>
 
         {/* الرسالة */}
         <textarea
@@ -124,8 +129,10 @@ style={{
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-pink-500 text-white rounded-lg p-3"
-        >
+className="w-full rounded-full text-white px-5 py-3 text-sm font-medium shadow transition"
+style={{
+  background: "#B36E71",
+}}
           {loading ? "جاري الإرسال..." : "تأكيد الإرسال"}
         </button>
 
