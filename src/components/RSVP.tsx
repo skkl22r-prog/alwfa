@@ -47,10 +47,18 @@ const Rsvp = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6">
-      <h2 className="text-2xl text-center mb-6">تأكيد الحضور</h2>
+<div className="max-w-md mx-auto p-6 text-white">
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+
+<form
+  onSubmit={handleSubmit}
+  className="space-y-4 rounded-2xl p-5 backdrop-blur-md"
+  style={{
+    background: "rgba(255,255,255,0.15)",
+    border: "1.5px solid #B36E71",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+  }}
+>
 
         {/* الاسم */}
         <input
@@ -58,8 +66,11 @@ const Rsvp = () => {
           placeholder="اكتب اسمك الكريم"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-pink-300 rounded-lg p-3"
-          required
+          className="w-full rounded-xl border px-4 py-3 text-sm text-white placeholder-white/70"
+style={{
+  background: "rgba(255,255,255,0.10)",
+  border: "1px solid #B36E71",
+}}
         />
 
         {/* خيارات الحضور */}
@@ -79,11 +90,18 @@ const Rsvp = () => {
           <button
             type="button"
             onClick={() => setAttendance("no")}
-            className={`p-3 rounded-lg border ${
-              attendance === "no"
-                ? "bg-pink-500 text-white border-pink-500"
-                : "border-pink-300"
-            }`}
+            className={`rounded-xl px-3 py-3 text-sm border transition ${
+  attendance === "yes"
+    ? "text-white"
+    : "text-white/80"
+}`}
+style={{
+  background:
+    attendance === "yes"
+      ? "#B36E71"
+      : "rgba(255,255,255,0.10)",
+  border: "1px solid #B36E71",
+}}
           >
             الاعتذار عن الحضور
           </button>
@@ -94,8 +112,12 @@ const Rsvp = () => {
           placeholder="رسالة إلى العروسين (اختياري)"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full border border-pink-300 rounded-lg p-3"
-          rows={3}
+className="w-full rounded-xl border px-4 py-3 text-sm text-white placeholder-white/70 resize-none"
+style={{
+  background: "rgba(255,255,255,0.10)",
+  border: "1px solid #B36E71",
+}}
+
         />
 
         {/* زر الإرسال */}
