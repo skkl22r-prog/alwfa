@@ -87,12 +87,12 @@ const Index = () => {
       {opened && (
         <main className="relative z-10">
           <section className="min-h-screen flex items-center justify-center">
-            <img
-              src={invitationImg}
-              alt="دعوة زفاف الوفاء"
-className="w-full h-auto animate-fade-in"
-              style={{ boxShadow: "var(--shadow-elegant)" }}
-            />
+           <img
+  src={invitationImg}
+  alt="دعوة زفاف الوفاء"
+  className="w-screen h-auto max-w-none animate-fade-in"
+  style={{ boxShadow: "var(--shadow-elegant)" }}
+/>
           </section>
 
           {/* Calendar block — date 1/7/2026 with heart strikethrough */}
