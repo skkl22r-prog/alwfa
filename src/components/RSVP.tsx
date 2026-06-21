@@ -58,18 +58,27 @@ const Rsvp = () => {
       >
 
         {/* الاسم */}
-        <input
-          type="text"
-          placeholder="اكتب اسمك الكريم"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-xl px-4 py-3 text-sm"
-          style={{
-            background: "#f5f5f5",
-            border: "1px solid #B36E71",
-            color: "#B36E71",
-          }}
-        />
+        <div>
+  <label
+    className="block mb-1 text-sm"
+    style={{ color: "#B36E71" }}
+  >
+    الاسم الكريم
+  </label>
+
+  <input
+    type="text"
+    placeholder="اكتب اسمك الكريم..."
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    className="w-full rounded-xl px-4 py-3 text-sm"
+    style={{
+      background: "#f5f5f5",
+      border: "1px solid #B36E71",
+      color: "#B36E71",
+    }}
+  />
+</div>
 
         {/* أزرار الحضور */}
         <div className="grid grid-cols-2 gap-2">
@@ -105,18 +114,27 @@ const Rsvp = () => {
         </div>
 
         {/* الرسالة */}
-        <textarea
-          placeholder="رسالة إلى العروسين (اختياري)"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded-xl px-4 py-3 text-sm resize-none"
-          rows={3}
-          style={{
-            background: "#f5f5f5",
-            border: "1px solid #B36E71",
-            color: "#B36E71",
-          }}
-        />
+        <div>
+  <label
+    className="block mb-1 text-sm"
+    style={{ color: "#B36E71" }}
+  >
+    رسالة إلى العروسين (اختياري)
+  </label>
+
+  <textarea
+    placeholder="...اكتب رسالتك"
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    className="w-full rounded-xl px-4 py-3 text-sm resize-none"
+    rows={3}
+    style={{
+      background: "#f5f5f5",
+      border: "1px solid #B36E71",
+      color: "#B36E71",
+    }}
+  />
+</div>
 
         {/* زر الإرسال */}
         <button
